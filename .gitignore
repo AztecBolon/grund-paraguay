@@ -1,0 +1,31 @@
+# Python build cache
+__pycache__/
+*.pyc
+*.pyo
+
+# OS/editor cruft
+.DS_Store
+
+# Legacy pre-multilingual root pages (superseded by ru/ es/ en/ de/ — kept
+# on disk during the transition, intentionally not tracked in git to avoid
+# shipping stale duplicates of the current site).
+/keisy.html
+/konfidentsialnost.html
+/kontakty.html
+/o-kompanii.html
+/oferta.html
+/politika-konfidentsialnosti.html
+/protsess-i-sroki.html
+/riski.html
+/stoimost.html
+/terminologiya.html
+/uslugi.html
+
+# Internal planning/research notes — live in the Cowork project knowledge
+# base, not in the code repo.
+/design/
+*.md
+!README.md
+
+# Local deploy scratch
+/_deploy/

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grund Paraguay</title>
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://grundparaguay.com/">
+<meta http-equiv="refresh" content="3;url=ru/index.html">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/favicon-180.png">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  body{display:flex;align-items:center;justify-content:center;min-height:100vh;background:var(--paper);}
+  .picker{max-width:520px;width:100%;padding:32px 24px;text-align:center;}
+  .picker img{width:56px;height:56px;margin-bottom:16px;}
+  .picker .redirect-note{font-size:13px;color:var(--ink-muted);margin-bottom:24px;}
+  .picker .choose-label{font-size:13px;color:var(--ink-muted);margin:20px 0 10px;}
+  .lang-cards{display:flex;flex-direction:column;gap:10px;}
+  .lang-card{display:flex;flex-direction:column;gap:2px;padding:14px 18px;border:1px solid rgba(20,33,59,.15);border-radius:8px;text-decoration:none;text-align:left;transition:border-color .15s,background .15s;}
+  .lang-card:hover{border-color:var(--blue);background:var(--paper-alt);}
+  .lang-native{font-weight:700;color:var(--ink);font-size:16px;}
+  .lang-tagline{font-size:13px;color:var(--ink-muted);}
+</style>
+<script>
+(function () {
+  var supported = ['ru', 'es', 'en', 'de'];
+  var def = 'ru';
+  var langs = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || navigator.userLanguage || def];
+  var target = def;
+  for (var i = 0; i < langs.length; i++) {
+    var code = (langs[i] || '').slice(0, 2).toLowerCase();
+    if (supported.indexOf(code) !== -1) { target = code; break; }
+  }
+  var dest = {'ru': "ru/index.html", 'es': "es/index.html", 'en': "en/index.html", 'de': "de/index.html"}[target];
+  if (dest) { window.location.replace(dest); }
+})();
+</script>
+</head>
+<body>
+  <div class="picker">
+    <img src="assets/img/mark.png" alt="Grund Paraguay" width="56" height="56">
+    <div class="redirect-note">Определяем язык… / Detectando idioma… / Detecting language… / Sprache wird erkannt…</div>
+    <div class="choose-label">Или выберите язык вручную: / O elija el idioma manualmente: / Or choose a language manually: / Oder Sprache manuell wählen:</div>
+    <div class="lang-cards">
+      <a class="lang-card" href="ru/index.html" data-lang="ru">
+        <span class="lang-native">Русский</span>
+        <span class="lang-tagline">Переезд, резидентура и бизнес в Парагвае</span>
+      </a>
+      <a class="lang-card" href="es/index.html" data-lang="es">
+        <span class="lang-native">Español</span>
+        <span class="lang-tagline">Mudanza, residencia y negocios en Paraguay</span>
+      </a>
+      <a class="lang-card" href="en/index.html" data-lang="en">
+        <span class="lang-native">English</span>
+        <span class="lang-tagline">Relocation, residency and business in Paraguay</span>
+      </a>
+      <a class="lang-card" href="de/index.html" data-lang="de">
+        <span class="lang-native">Deutsch</span>
+        <span class="lang-tagline">Umzug, Aufenthalt und Geschäft in Paraguay</span>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
