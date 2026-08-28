@@ -27,7 +27,8 @@ def L(lang):
     ids = ["home", "uslugi", "stoimost", "riski", "protsess", "terminologiya",
            "paragvay-hub", "pochemu-paragvay", "zhizn-v-paragvae", "stoimost-zhizni",
            "nalogi-inostrantsev", "banki-perevody", "viza-vyezd", "mify-voprosy",
-           "dokumenty", "turizm", "meditsina-v-paragvae", "usluga-medicina"]
+           "dokumenty", "dok-temporal", "turizm", "meditsina-v-paragvae", "usluga-medicina",
+           "usluga-compliance", "rabota-v-paragvae"]
     return {pid: href_to(pid, lang) for pid in ids}
 
 
@@ -308,6 +309,16 @@ def build_hub_landing():
       <h3>{meditsina_title}</h3>
       <p style="font-size:16px;">{meditsina_desc}</p>
       <a class="card-link" href="{l['meditsina-v-paragvae']}">{MORE[lang]}</a>
+    </article>'''
+
+        # «Работа в Парагвае» — подстраница хаба (28.08.2026), карточка тем же приёмом, что и
+        # «Туризм»/«Медицина в Парагвае» выше.
+        rabota_title, rabota_desc = RABOTA_CARD[lang]
+        blocks_html += f'''
+    <article class="card" style="margin-bottom:24px;">
+      <h3>{rabota_title}</h3>
+      <p style="font-size:16px;">{rabota_desc}</p>
+      <a class="card-link" href="{l['rabota-v-paragvae']}">{MORE[lang]}</a>
     </article>'''
 
         body = f'''
@@ -1721,6 +1732,25 @@ MEDITSINA_CARD = {
            "unterschreibt."),
 }
 
+# Карточка «Работа в Парагвае» на лендинге хаба (28.08.2026) — тем же приёмом, что TOUR_CARD/
+# MEDITSINA_CARD выше.
+RABOTA_CARD = {
+    "ru": ("Работа в Парагвае",
+           "Нужна ли резиденция для трудоустройства, что даёт cédula, когда регистрировать RUC "
+           "и IPS — пошагово, с честной оценкой того, что подтвердить не удалось."),
+    "es": ("Trabajo en Paraguay",
+           "Si se necesita la residencia para trabajar, qué da la cédula, cuándo inscribirse en "
+           "el RUC y en el IPS — paso a paso, con una evaluación honesta de lo que no se pudo "
+           "confirmar."),
+    "en": ("Working in Paraguay",
+           "Whether you need residency to work, what the cédula gets you, and when to register "
+           "for RUC and IPS — step by step, with an honest note on what couldn't be confirmed."),
+    "de": ("Arbeiten in Paraguay",
+           "Ob man für die Arbeit eine Aufenthaltserlaubnis braucht, was die Cédula bringt und "
+           "wann man sich bei RUC und IPS anmelden muss — Schritt für Schritt, mit einem "
+           "ehrlichen Hinweis darauf, was sich nicht bestätigen ließ."),
+}
+
 
 def build_meditsina():
   for lang in LANGS:
@@ -2114,6 +2144,366 @@ def build_meditsina():
     page("meditsina-v-paragvae", lang, TITLE_MEDITSINA[lang], LEAD_MEDITSINA[lang], body,
          extra_schema=schema_crumbs(lang, H1_MEDITSINA[lang], "meditsina-v-paragvae"))
 
+
+# ============================================================ 9. РАБОТА В ПАРАГВАЕ
+#
+# 28.08.2026, сразу мультиязычная (по запросу заказчика «Сделай страницу Работа в Парагвае»,
+# тем же порядком, что и предыдущие добавления в разделе — RU/ES/EN/DE одним заходом).
+# Источник фактуры — веб-поиск в этой же сессии Cowork: официальные и профильные испаноязычные
+# источники (портал IPS, ABC Color, действующая Ley N° 213/93 «Código del Trabajo», Ley
+# N° 3452/2008) плюс уже подтверждённый ранее в проекте факт об обязанности RUC после Residencia
+# Temporal (design/teksty-mvp-stranits.md). Полная сводка источников и уровней уверенности —
+# design/rabota-v-paragvae-issledovanie.md (проект Cowork).
+
+TITLE_RABOTA = {
+    "ru": "Работа в Парагвае: документы для трудоустройства | Grund Paraguay",
+    "es": "Trabajo en Paraguay: documentos para el empleo | Grund Paraguay",
+    "en": "Working in Paraguay: Documents for Employment | Grund Paraguay",
+    "de": "Arbeiten in Paraguay: Dokumente für die Beschäftigung | Grund Paraguay",
+}
+H1_RABOTA = {
+    "ru": "Работа в Парагвае: как устроено официальное трудоустройство",
+    "es": "Trabajo en Paraguay: cómo funciona el empleo formal",
+    "en": "Working in Paraguay: how formal employment works",
+    "de": "Arbeiten in Paraguay: Wie die formelle Beschäftigung funktioniert",
+}
+LEAD_RABOTA = {
+    "ru": ("Нужна ли резиденция, чтобы работать легально, что даёт cédula, когда регистрировать "
+           "RUC и IPS — по шагам, с источниками и честной оценкой того, что подтвердить не удалось."),
+    "es": ("Si se necesita la residencia para trabajar legalmente, qué da la cédula, cuándo "
+           "inscribirse en el RUC y en el IPS — paso a paso, con fuentes y una evaluación "
+           "honesta de lo que no se pudo confirmar."),
+    "en": ("Whether you need residency to work legally, what the cédula gets you, and when to "
+           "register for RUC and IPS — step by step, with sources and an honest note on what "
+           "couldn't be confirmed."),
+    "de": ("Ob man für legale Arbeit eine Aufenthaltserlaubnis braucht, was die Cédula bringt "
+           "und wann man sich bei RUC und IPS anmelden muss — Schritt für Schritt, mit Quellen "
+           "und einem ehrlichen Hinweis darauf, was sich nicht bestätigen ließ."),
+}
+
+
+def build_rabota():
+  for lang in LANGS:
+    l = L(lang)
+    if lang == "ru":
+        prose = f'''
+    <p>Отдельного «разрешения на работу», не привязанного к статусу в стране, в Парагвае нет —
+    юридическое право работать даёт сама резиденция. Дальше вопрос не «какое разрешение
+    оформить», а какие документы и регистрации нужны на каждом шаге — от резидентуры до
+    трудового договора. Привычной в России «трудовой книжки» в Парагвае тоже нет: занятость
+    подтверждается трудовым договором и записью в системе социального страхования.</p>
+
+    <h2>Резидентура — обязательное условие</h2>
+    <p>Право легально работать даёт временная (<a href="{l['dok-temporal']}">Residencia
+    Temporal</a>) или постоянная резиденция — отдельного трека «рабочей визы» в стороне от
+    резидентуры источники не описывают. Без действующей резиденции легальное трудоустройство
+    невозможно.</p>
+
+    <h2>Cédula de identidad paraguaya</h2>
+    <p>С августа 2024 года парагвайскую cédula можно получить уже на статусе временного
+    резидента — раньше это было доступно только постоянным резидентам. Свежий (на момент
+    проверки) список требований для иностранца:</p>
+    <ol>
+      <li>Certificado de Radicación (Permanente или Temporal) от миграционной службы</li>
+      <li>заверенная копия Carnet de Admisión</li>
+      <li>заверенная копия документа страны происхождения с визой МИД</li>
+      <li>свидетельство о рождении — оригинал с консульской визой и апостилем</li>
+      <li>документы о семейном положении, если применимо</li>
+      <li>Certificado de Vida y Residencia от комиссариата или мирового суда</li>
+      <li>справка об отсутствии судимости из страны происхождения (для лиц от 14 лет)</li>
+      <li>справка Интерпола</li>
+      <li>справка об отсутствии судимости в самом Парагвае</li>
+      <li>заверенная копия карты регистрации (registro)</li>
+    </ol>
+    <p>Документы не на испанском — через присяжного переводчика (Traductor Público
+    matriculado).</p>
+
+    <h2>RUC — постановка на налоговый учёт</h2>
+    <p>После получения Residencia Temporal возникает обязанность зарегистрировать
+    <a href="{l['terminologiya']}#ruc">RUC</a> и подавать налоговую отчётность — это касается и
+    наёмных работников, и предпринимателей, только состав подтверждающих занятость документов
+    разный. Ставки и логика налогообложения — на странице
+    <a href="{l['nalogi-inostrantsev']}">«Налоги для иностранцев»</a>.</p>
+
+    <h2>IPS и трудовой договор у работодателя</h2>
+    <p>Формализация трудовых отношений договором обязательна по Código del Trabajo (Ley
+    N° 213/93) и Ley N° 3452/2008 — как для граждан, так и для иностранцев. Отдельно обязательна
+    регистрация в <a href="{l['terminologiya']}#ips">IPS</a> (ст. 95 Конституции Парагвая):
+    взнос — 25,5% от зарплаты, 9% — доля работника, 16,5% — доля работодателя. Со стороны
+    работника для регистрации нужны carnet de migraciones и документ, удостоверяющий личность
+    (до получения cédula — документ страны происхождения). Со стороны работодателя для
+    постановки на учёт в IPS нужны его cédula и RUC/Constancia de RUC (для физлица) либо
+    учредительные документы, акт последнего собрания и cédula представителя (для юрлица).</p>
+
+    <p class="confidence-note">Единого официального чек-листа документов именно для самого
+    трудового договора (в отличие от чётких списков для cédula и регистрации в IPS выше) найти
+    не удалось — судя по всему, его содержание (условия, оплата, функции) регулируется Código
+    del Trabajo содержательно, а не отдельным перечнем бумаг. Отдельного межправительственного
+    соглашения о трудовой миграции между Россией и Парагваем подтвердить тоже не удалось —
+    занятость оформляется по общему для всех иностранцев режиму, описанному выше.</p>
+
+    <h2>Если нужна помощь</h2>
+    <p>Ведение отчётности после регистрации RUC, контроль сроков и сопровождение переписки с
+    ведомствами — отдельная услуга,
+    <a href="{l['usluga-compliance']}">«Сопровождение и комплаенс»</a>.</p>
+
+    <h2>Смотрите также</h2>
+    <ul>
+      <li><a href="{l['dok-temporal']}">Документы для временной резиденции</a> — с чего
+      начинается легальный статус</li>
+      <li><a href="{l['nalogi-inostrantsev']}">«Налоги для иностранцев»</a> — ставки IRE, IVA,
+      IRP и обязанность RUC</li>
+      <li><a href="{l['terminologiya']}#ips">«Терминология»: IPS</a> и
+      <a href="{l['terminologiya']}#cedula">Cédula</a> — короткие определения</li>
+      <li><a href="{l['usluga-compliance']}">«Сопровождение и комплаенс»</a> — ведение
+      отчётности после трудоустройства</li>
+    </ul>'''
+    elif lang == "es":
+        prose = f'''
+    <p>En Paraguay no existe un «permiso de trabajo» aparte, independiente del estatus
+    migratorio — el derecho legal a trabajar lo otorga la propia residencia. La pregunta no es
+    «qué permiso tramitar», sino qué documentos e inscripciones se necesitan en cada paso —
+    desde la residencia hasta el contrato de trabajo. Tampoco existe en Paraguay la «libreta de
+    trabajo» habitual en Rusia: el empleo se acredita con el contrato de trabajo y la
+    inscripción en el sistema de seguridad social.</p>
+
+    <h2>La residencia — condición obligatoria</h2>
+    <p>El derecho a trabajar legalmente lo otorga la residencia temporal
+    (<a href="{l['dok-temporal']}">Residencia Temporal</a>) o la permanente — las fuentes no
+    describen una vía aparte de «visa de trabajo» separada de la residencia. Sin una residencia
+    vigente, el empleo formal no es posible.</p>
+
+    <h2>Cédula de identidad paraguaya</h2>
+    <p>Desde agosto de 2024, la cédula paraguaya puede obtenerse ya con el estatus de residente
+    temporal — antes solo estaba disponible para residentes permanentes. Lista reciente (al
+    momento de la revisión) de requisitos para un extranjero:</p>
+    <ol>
+      <li>Certificado de Radicación (Permanente o Temporal) de la Dirección de Migraciones</li>
+      <li>copia autenticada del Carnet de Admisión</li>
+      <li>copia autenticada del documento del país de origen con visación del MRE</li>
+      <li>partida de nacimiento — original con visación consular y apostilla</li>
+      <li>documentos sobre el estado civil, si corresponde</li>
+      <li>Certificado de Vida y Residencia de la comisaría o del juzgado de paz</li>
+      <li>certificado de antecedentes penales del país de origen (para mayores de 14 años)</li>
+      <li>certificado de Interpol</li>
+      <li>certificado de antecedentes en el propio Paraguay</li>
+      <li>copia autenticada de la tarjeta de registro (registro)</li>
+    </ol>
+    <p>Los documentos que no estén en español requieren traducción de un Traductor Público
+    matriculado.</p>
+
+    <h2>RUC — inscripción en el registro tributario</h2>
+    <p>Tras obtener la Residencia Temporal surge la obligación de inscribir el
+    <a href="{l['terminologiya']}#ruc">RUC</a> y presentar declaraciones — esto aplica tanto a
+    empleados en relación de dependencia como a emprendedores, solo cambia el conjunto de
+    documentos que acreditan la actividad. Las tasas y la lógica tributaria están en la página
+    <a href="{l['nalogi-inostrantsev']}">«Impuestos para extranjeros»</a>.</p>
+
+    <h2>IPS y contrato de trabajo con el empleador</h2>
+    <p>Formalizar la relación laboral mediante contrato es obligatorio según el Código del
+    Trabajo (Ley N.° 213/93) y la Ley N.° 3452/2008 — tanto para ciudadanos como para
+    extranjeros. Por separado es obligatoria la inscripción en el
+    <a href="{l['terminologiya']}#ips">IPS</a> (art. 95 de la Constitución de Paraguay): el
+    aporte es del 25,5% del salario, 9% a cargo del trabajador y 16,5% a cargo del empleador.
+    Por el lado del trabajador se necesitan el carnet de migraciones y un documento de
+    identidad (hasta obtener la cédula — el documento del país de origen). Por el lado del
+    empleador, para inscribirse en el IPS se necesitan su cédula y RUC/Constancia de RUC (para
+    persona física) o los documentos constitutivos, el acta de la última asamblea y la cédula
+    del representante (para persona jurídica).</p>
+
+    <p class="confidence-note">No se pudo encontrar una lista oficial única de documentos
+    específicamente para el propio contrato de trabajo (a diferencia de las listas claras para
+    la cédula y la inscripción en el IPS de arriba) — al parecer, su contenido (condiciones,
+    remuneración, funciones) se regula de fondo por el Código del Trabajo, no por un listado de
+    papeles aparte. Tampoco se pudo confirmar un convenio intergubernamental específico de
+    migración laboral entre Rusia y Paraguay — el empleo se tramita bajo el régimen general
+    descrito arriba, común a todos los extranjeros.</p>
+
+    <h2>Si necesita ayuda</h2>
+    <p>La gestión de las declaraciones tras inscribir el RUC, el control de plazos y el
+    acompañamiento en la correspondencia con los organismos son un servicio aparte,
+    <a href="{l['usluga-compliance']}">«Acompañamiento y cumplimiento»</a>.</p>
+
+    <h2>Vea también</h2>
+    <ul>
+      <li><a href="{l['dok-temporal']}">Documentos para la residencia temporal</a> — por dónde
+      empieza el estatus legal</li>
+      <li><a href="{l['nalogi-inostrantsev']}">«Impuestos para extranjeros»</a> — tasas de IRE,
+      IVA, IRP y la obligación del RUC</li>
+      <li><a href="{l['terminologiya']}#ips">«Terminología»: IPS</a> y
+      <a href="{l['terminologiya']}#cedula">Cédula</a> — definiciones breves</li>
+      <li><a href="{l['usluga-compliance']}">«Acompañamiento y cumplimiento»</a> — gestión de
+      declaraciones tras el empleo</li>
+    </ul>'''
+    elif lang == "en":
+        prose = f'''
+    <p>Paraguay doesn't have a separate "work permit" independent of immigration status — the
+    legal right to work comes from residency itself. The question isn't "which permit to get,"
+    it's which documents and registrations are needed at each step — from residency through to
+    the labor contract. Paraguay also has no equivalent of a Russian-style "work record book":
+    employment is evidenced by the labor contract and the social-insurance registration.</p>
+
+    <h2>Residency — the mandatory precondition</h2>
+    <p>The right to work legally comes from temporary
+    (<a href="{l['dok-temporal']}">Residencia Temporal</a>) or permanent residency — sources
+    don't describe a separate "work visa" track apart from residency. Without valid residency,
+    formal employment isn't possible.</p>
+
+    <h2>Paraguayan cédula de identidad</h2>
+    <p>Since August 2024, the Paraguayan cédula has been available already at temporary-resident
+    status — previously it was available only to permanent residents. A recent (as of this
+    check) list of requirements for a foreigner:</p>
+    <ol>
+      <li>Certificado de Radicación (Permanent or Temporary) from the immigration service</li>
+      <li>a certified copy of the Carnet de Admisión</li>
+      <li>a certified copy of the home-country ID document with a foreign-ministry visa stamp</li>
+      <li>birth certificate — original, with consular legalization and apostille</li>
+      <li>civil-status documents, where applicable</li>
+      <li>Certificado de Vida y Residencia from the local police commissariat or justice of the
+      peace</li>
+      <li>a police-clearance certificate from the home country (for anyone age 14 or older)</li>
+      <li>an Interpol clearance certificate</li>
+      <li>a police-clearance certificate from Paraguay itself</li>
+      <li>a certified copy of the registration card (registro)</li>
+    </ol>
+    <p>Documents not in Spanish need translation by a registered sworn translator (Traductor
+    Público matriculado).</p>
+
+    <h2>RUC — tax registration</h2>
+    <p>Once Residencia Temporal is granted, registering an <a href="{l['terminologiya']}#ruc">RUC</a>
+    and filing tax returns becomes mandatory — this applies to salaried employees and
+    entrepreneurs alike, only the set of documents proving your occupation differs. Rates and
+    the underlying tax logic are covered on the
+    <a href="{l['nalogi-inostrantsev']}">"Taxes for Foreigners"</a> page.</p>
+
+    <h2>IPS and the labor contract with an employer</h2>
+    <p>Formalizing the employment relationship with a contract is mandatory under the Labor Code
+    (Ley N° 213/93) and Ley N° 3452/2008 — for citizens and foreigners alike. Separately,
+    registration with <a href="{l['terminologiya']}#ips">IPS</a> is mandatory (Art. 95 of
+    Paraguay's Constitution): the contribution is 25.5% of salary, split 9% employee / 16.5%
+    employer. On the employee's side, registration needs the carnet de migraciones plus an ID
+    document (the home-country document, until the cédula is issued). On the employer's side,
+    registering with IPS needs their cédula and RUC/Constancia de RUC (for an individual
+    employer) or founding documents, minutes of the most recent shareholders' meeting, and the
+    representative's cédula (for a legal entity).</p>
+
+    <p class="confidence-note">We couldn't find a single official checklist of documents for the
+    labor contract itself (unlike the clear lists for the cédula and IPS registration above) —
+    its content (terms, pay, duties) appears to be governed substantively by the Labor Code
+    rather than by a separate paperwork list. We also couldn't confirm a specific
+    intergovernmental labor-migration agreement between Russia and Paraguay — employment is
+    handled under the general regime described above, the same one that applies to all
+    foreigners.</p>
+
+    <h2>If you need help</h2>
+    <p>Handling tax filings after RUC registration, tracking deadlines, and managing
+    correspondence with government agencies is a separate service,
+    <a href="{l['usluga-compliance']}">"Ongoing Compliance"</a>.</p>
+
+    <h2>See also</h2>
+    <ul>
+      <li><a href="{l['dok-temporal']}">Documents for temporary residency</a> — where legal
+      status starts</li>
+      <li><a href="{l['nalogi-inostrantsev']}">"Taxes for Foreigners"</a> — IRE, IVA, and IRP
+      rates, and the RUC obligation</li>
+      <li><a href="{l['terminologiya']}#ips">"Terminology": IPS</a> and
+      <a href="{l['terminologiya']}#cedula">Cédula</a> — short definitions</li>
+      <li><a href="{l['usluga-compliance']}">"Ongoing Compliance"</a> — handling filings after
+      you start working</li>
+    </ul>'''
+    else:  # de
+        prose = f'''
+    <p>Eine gesonderte „Arbeitserlaubnis", unabhängig vom Aufenthaltsstatus, gibt es in Paraguay
+    nicht — das Recht, legal zu arbeiten, entsteht durch die Aufenthaltserlaubnis selbst. Die
+    Frage ist nicht „welche Erlaubnis beantragen", sondern welche Dokumente und Anmeldungen bei
+    jedem Schritt nötig sind — von der Aufenthaltserlaubnis bis zum Arbeitsvertrag. Ein
+    „Arbeitsbuch" wie in Russland üblich gibt es in Paraguay ebenfalls nicht: Die Beschäftigung
+    wird durch den Arbeitsvertrag und die Anmeldung im Sozialversicherungssystem nachgewiesen.</p>
+
+    <h2>Aufenthaltserlaubnis — zwingende Voraussetzung</h2>
+    <p>Das Recht, legal zu arbeiten, entsteht durch die befristete
+    (<a href="{l['dok-temporal']}">Residencia Temporal</a>) oder unbefristete
+    Aufenthaltserlaubnis — Quellen beschreiben keinen gesonderten „Arbeitsvisum"-Weg neben der
+    Aufenthaltserlaubnis. Ohne gültige Aufenthaltserlaubnis ist eine formelle Beschäftigung
+    nicht möglich.</p>
+
+    <h2>Paraguayische Cédula de identidad</h2>
+    <p>Seit August 2024 kann die paraguayische Cédula bereits mit dem Status eines befristeten
+    Residenten beantragt werden — zuvor stand sie nur unbefristeten Residenten offen. Eine
+    aktuelle (Stand der Prüfung) Liste der Anforderungen für Ausländer:</p>
+    <ol>
+      <li>Certificado de Radicación (unbefristet oder befristet) von der Migrationsbehörde</li>
+      <li>beglaubigte Kopie des Carnet de Admisión</li>
+      <li>beglaubigte Kopie des Ausweisdokuments aus dem Herkunftsland mit Visasichtvermerk des
+      Außenministeriums</li>
+      <li>Geburtsurkunde — Original mit konsularischer Beglaubigung und Apostille</li>
+      <li>Dokumente zum Familienstand, sofern zutreffend</li>
+      <li>Certificado de Vida y Residencia vom Kommissariat oder Friedensrichter</li>
+      <li>polizeiliches Führungszeugnis aus dem Herkunftsland (ab 14 Jahren)</li>
+      <li>Interpol-Unbedenklichkeitsbescheinigung</li>
+      <li>polizeiliches Führungszeugnis aus Paraguay selbst</li>
+      <li>beglaubigte Kopie der Registrierungskarte (registro)</li>
+    </ol>
+    <p>Nicht-spanischsprachige Dokumente benötigen eine Übersetzung durch einen vereidigten,
+    beim Obersten Gerichtshof registrierten Übersetzer (Traductor Público matriculado).</p>
+
+    <h2>RUC — steuerliche Erfassung</h2>
+    <p>Nach Erhalt der Residencia Temporal entsteht die Pflicht, sich beim
+    <a href="{l['terminologiya']}#ruc">RUC</a> anzumelden und Steuererklärungen einzureichen —
+    das gilt gleichermaßen für Angestellte und Unternehmer, nur die Nachweisdokumente für die
+    Tätigkeit unterscheiden sich. Sätze und die zugrunde liegende Logik der Besteuerung stehen
+    auf der Seite <a href="{l['nalogi-inostrantsev']}">„Steuern für Ausländer"</a>.</p>
+
+    <h2>IPS und Arbeitsvertrag beim Arbeitgeber</h2>
+    <p>Die Formalisierung des Arbeitsverhältnisses durch einen Vertrag ist nach dem
+    Arbeitsgesetzbuch (Ley N° 213/93) und der Ley N° 3452/2008 verpflichtend — sowohl für
+    Staatsbürger als auch für Ausländer. Gesondert ist die Anmeldung bei
+    <a href="{l['terminologiya']}#ips">IPS</a> verpflichtend (Art. 95 der Verfassung Paraguays):
+    Der Beitrag beträgt 25,5% des Gehalts, davon 9% Arbeitnehmer- und 16,5% Arbeitgeberanteil.
+    Auf Seiten des Arbeitnehmers sind für die Anmeldung das Carnet de Migraciones sowie ein
+    Ausweisdokument nötig (bis zum Erhalt der Cédula — das Dokument des Herkunftslands). Auf
+    Seiten des Arbeitgebers sind für die IPS-Anmeldung dessen Cédula und RUC/Constancia de RUC
+    (bei einer natürlichen Person) bzw. Gründungsdokumente, das Protokoll der letzten
+    Gesellschafterversammlung und die Cédula des Vertreters (bei einer juristischen Person)
+    nötig.</p>
+
+    <p class="confidence-note">Eine einzige offizielle Dokumentenliste speziell für den
+    Arbeitsvertrag selbst (im Unterschied zu den klaren Listen für Cédula und IPS-Anmeldung
+    oben) ließ sich nicht finden — sein Inhalt (Bedingungen, Vergütung, Aufgaben) wird
+    offenbar inhaltlich durch das Arbeitsgesetzbuch geregelt, nicht durch eine gesonderte
+    Dokumentenliste. Auch ein gesondertes zwischenstaatliches Abkommen zur Arbeitsmigration
+    zwischen Russland und Paraguay ließ sich nicht bestätigen — die Beschäftigung erfolgt nach
+    der oben beschriebenen allgemeinen Regelung, die für alle Ausländer gilt.</p>
+
+    <h2>Wenn Sie Hilfe brauchen</h2>
+    <p>Die laufende Erklärungsführung nach der RUC-Anmeldung, die Fristenkontrolle und die
+    Begleitung im Schriftverkehr mit den Behörden sind eine eigene Leistung,
+    <a href="{l['usluga-compliance']}">„Begleitung und Compliance"</a>.</p>
+
+    <h2>Siehe auch</h2>
+    <ul>
+      <li><a href="{l['dok-temporal']}">Dokumente für die befristete Aufenthaltserlaubnis</a> —
+      womit der rechtliche Status beginnt</li>
+      <li><a href="{l['nalogi-inostrantsev']}">„Steuern für Ausländer"</a> — Sätze von IRE,
+      IVA, IRP und die RUC-Pflicht</li>
+      <li><a href="{l['terminologiya']}#ips">„Terminologie": IPS</a> und
+      <a href="{l['terminologiya']}#cedula">Cédula</a> — kurze Definitionen</li>
+      <li><a href="{l['usluga-compliance']}">„Begleitung und Compliance"</a> — laufende
+      Erklärungsführung nach dem Arbeitsbeginn</li>
+    </ul>'''
+
+    body = f'''
+{crumbs(lang, H1_RABOTA[lang])}
+{hero(H1_RABOTA[lang], LEAD_RABOTA[lang])}
+<section style="padding-top:0;">
+  <div class="prose">
+    {prose}
+  </div>
+</section>
+'''
+    page("rabota-v-paragvae", lang, TITLE_RABOTA[lang], LEAD_RABOTA[lang], body,
+         extra_schema=schema_crumbs(lang, H1_RABOTA[lang], "rabota-v-paragvae"))
+
 # ======================================================================= run
 
 build_hub_landing()
@@ -2125,3 +2515,4 @@ build_banki()
 build_viza()
 build_mify()
 build_meditsina()
+build_rabota()

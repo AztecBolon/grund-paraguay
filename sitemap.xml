@@ -1086,6 +1086,46 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://grundparaguay.com/ru/rabota-v-paragvae.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://grundparaguay.com/ru/rabota-v-paragvae.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://grundparaguay.com/es/trabajo-en-paraguay.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://grundparaguay.com/en/working-in-paraguay.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://grundparaguay.com/de/arbeiten-in-paraguay.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grundparaguay.com/ru/rabota-v-paragvae.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://grundparaguay.com/es/trabajo-en-paraguay.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://grundparaguay.com/ru/rabota-v-paragvae.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://grundparaguay.com/es/trabajo-en-paraguay.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://grundparaguay.com/en/working-in-paraguay.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://grundparaguay.com/de/arbeiten-in-paraguay.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grundparaguay.com/ru/rabota-v-paragvae.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://grundparaguay.com/en/working-in-paraguay.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://grundparaguay.com/ru/rabota-v-paragvae.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://grundparaguay.com/es/trabajo-en-paraguay.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://grundparaguay.com/en/working-in-paraguay.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://grundparaguay.com/de/arbeiten-in-paraguay.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grundparaguay.com/ru/rabota-v-paragvae.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://grundparaguay.com/de/arbeiten-in-paraguay.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://grundparaguay.com/ru/rabota-v-paragvae.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://grundparaguay.com/es/trabajo-en-paraguay.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://grundparaguay.com/en/working-in-paraguay.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://grundparaguay.com/de/arbeiten-in-paraguay.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grundparaguay.com/ru/rabota-v-paragvae.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://grundparaguay.com/ru/soprovozhdenie-i-komplaens.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://grundparaguay.com/ru/soprovozhdenie-i-komplaens.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://grundparaguay.com/es/acompanamiento-y-cumplimiento.html"/>

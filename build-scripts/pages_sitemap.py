@@ -54,6 +54,8 @@ EXTRA_LABELS = {
                         "en": "Company Formation (EAS/SRL)", "de": "Unternehmensgründung (EAS/SRL)"},
     "usluga-business": {"ru": "Покупка и продажа бизнеса", "es": "Compra y venta de empresas",
                          "en": "Buying & Selling a Business", "de": "Kauf und Verkauf von Unternehmen"},
+    "rabota-v-paragvae": {"ru": "Работа в Парагвае", "es": "Trabajo en Paraguay",
+                           "en": "Working in Paraguay", "de": "Arbeiten in Paraguay"},
 }
 
 LABELS = {lang: {**NAV_LABELS[lang], **HUB_SUBPAGE_LABELS[lang],
@@ -65,6 +67,7 @@ ALL_IDS = [
     "kak-my-rabotaem", "protsess", "riski", "stoimost",
     "paragvay-hub", "pochemu-paragvay", "zhizn-v-paragvae", "stoimost-zhizni",
     "nalogi-inostrantsev", "banki-perevody", "viza-vyezd", "mify-voprosy", "turizm", "meditsina-v-paragvae",
+    "rabota-v-paragvae",
     "o-kompanii", "keisy", "kontakty",
     "konfidentsialnost", "dokumenty", "dok-temporal", "dok-permanente", "dok-investor", "dok-grazhdanstvo",
     "terminologiya", "oferta", "politika", "sitemap",
@@ -85,7 +88,7 @@ SECTIONS = [
     dict(id="stoimost", children=[]),
     dict(id="paragvay-hub", children=["pochemu-paragvay", "zhizn-v-paragvae", "stoimost-zhizni",
                                        "nalogi-inostrantsev", "banki-perevody", "viza-vyezd", "mify-voprosy",
-                                       "turizm", "meditsina-v-paragvae"]),
+                                       "turizm", "meditsina-v-paragvae", "rabota-v-paragvae"]),
     dict(id="o-kompanii", children=[]),
     dict(id="keisy", children=[]),
     dict(id="kontakty", children=[]),

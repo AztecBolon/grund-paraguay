@@ -222,6 +222,15 @@ SLUGS = {
     "meditsina-v-paragvae": {"ru": "meditsina-v-paragvae.html", "es": "medicina-en-paraguay.html",
                               "en": "healthcare-in-paraguay.html", "de": "medizin-in-paraguay.html"},
 
+    # --- «Работа в Парагвае» — новая подстраница хаба «Парагвай для переезда» (28.08.2026, по
+    # запросу заказчика «Сделай страницу Работа в Парагвае» — сразу мультиязычная, тем же
+    # порядком, что и последние добавления в разделе). Источник фактуры — веб-поиск в этой сессии
+    # Cowork (резидентура как единственное основание для права на работу, 10 требований для
+    # cédula, обязанность RUC уже подтверждена в проекте ранее, IPS 25,5% и Código del Trabajo
+    # Ley 213/93) — см. design/rabota-v-paragvae-issledovanie.md (проект Cowork).
+    "rabota-v-paragvae":   {"ru": "rabota-v-paragvae.html", "es": "trabajo-en-paraguay.html",
+                             "en": "working-in-paraguay.html", "de": "arbeiten-in-paraguay.html"},
+
     # --- «Релокация организаций» — восьмая услуга (21.08.2026, старт RU-only; 21.08.2026 —
     # переведена на ES/EN/DE по запросу заказчика «Делай релокацию и достопримечательности
     # мультиязычными»). Источник фактуры — design/relokatsiya-organizatsiy-issledovanie.md
