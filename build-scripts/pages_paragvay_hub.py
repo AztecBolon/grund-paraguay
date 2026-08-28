@@ -2194,20 +2194,25 @@ def build_rabota():
     подтверждается трудовым договором и записью в системе социального страхования.</p>
 
     <h2>Резидентура — обязательное условие</h2>
-    <p>Право легально работать даёт временная (<a href="{l['dok-temporal']}">Residencia
-    Temporal</a>) или постоянная резиденция — отдельного трека «рабочей визы» в стороне от
-    резидентуры источники не описывают. Без действующей резиденции легальное трудоустройство
-    невозможно.</p>
+    <p>Право легально работать даёт временная
+    (<a href="{l['terminologiya']}#residencia-temporal">Residencia Temporal</a>) или постоянная
+    (<a href="{l['terminologiya']}#residencia-permanente">Residencia Permanente</a>) резиденция —
+    отдельного трека «рабочей визы» в стороне от резидентуры источники не описывают. Без
+    действующей резиденции легальное трудоустройство невозможно. Чек-лист документов для
+    оформления — на странице <a href="{l['dok-temporal']}">«Документы для временной
+    резиденции»</a>.</p>
 
     <h2>Cédula de identidad paraguaya</h2>
-    <p>С августа 2024 года парагвайскую cédula можно получить уже на статусе временного
-    резидента — раньше это было доступно только постоянным резидентам. Свежий (на момент
-    проверки) список требований для иностранца:</p>
+    <p>С августа 2024 года парагвайскую <a href="{l['terminologiya']}#cedula">cédula</a> можно
+    получить уже на статусе временного резидента — раньше это было доступно только постоянным
+    резидентам. Свежий (на момент проверки) список требований для иностранца:</p>
     <ol>
-      <li>Certificado de Radicación (Permanente или Temporal) от миграционной службы</li>
+      <li>Certificado de Radicación (Permanente или Temporal) от миграционной службы
+      (<a href="{l['terminologiya']}#dnm">DNM</a>)</li>
       <li>заверенная копия Carnet de Admisión</li>
       <li>заверенная копия документа страны происхождения с визой МИД</li>
-      <li>свидетельство о рождении — оригинал с консульской визой и апостилем</li>
+      <li>свидетельство о рождении — оригинал с консульской визой и
+      <a href="{l['terminologiya']}#apostil">апостилем</a></li>
       <li>документы о семейном положении, если применимо</li>
       <li>Certificado de Vida y Residencia от комиссариата или мирового суда</li>
       <li>справка об отсутствии судимости из страны происхождения (для лиц от 14 лет)</li>
@@ -2215,8 +2220,9 @@ def build_rabota():
       <li>справка об отсутствии судимости в самом Парагвае</li>
       <li>заверенная копия карты регистрации (registro)</li>
     </ol>
-    <p>Документы не на испанском — через присяжного переводчика (Traductor Público
-    matriculado).</p>
+    <p>Документы не на испанском — через
+    <a href="{l['terminologiya']}#traductor-publico">присяжного переводчика (Traductor Público
+    matriculado)</a>.</p>
 
     <h2>RUC — постановка на налоговый учёт</h2>
     <p>После получения Residencia Temporal возникает обязанность зарегистрировать
@@ -2253,8 +2259,9 @@ def build_rabota():
       начинается легальный статус</li>
       <li><a href="{l['nalogi-inostrantsev']}">«Налоги для иностранцев»</a> — ставки IRE, IVA,
       IRP и обязанность RUC</li>
-      <li><a href="{l['terminologiya']}#ips">«Терминология»: IPS</a> и
-      <a href="{l['terminologiya']}#cedula">Cédula</a> — короткие определения</li>
+      <li><a href="{l['terminologiya']}#ips">«Терминология»: IPS</a>,
+      <a href="{l['terminologiya']}#cedula">Cédula</a> и
+      <a href="{l['terminologiya']}#ruc">RUC</a> — короткие определения</li>
       <li><a href="{l['usluga-compliance']}">«Сопровождение и комплаенс»</a> — ведение
       отчётности после трудоустройства</li>
     </ul>'''
@@ -2269,19 +2276,25 @@ def build_rabota():
 
     <h2>La residencia — condición obligatoria</h2>
     <p>El derecho a trabajar legalmente lo otorga la residencia temporal
-    (<a href="{l['dok-temporal']}">Residencia Temporal</a>) o la permanente — las fuentes no
-    describen una vía aparte de «visa de trabajo» separada de la residencia. Sin una residencia
-    vigente, el empleo formal no es posible.</p>
+    (<a href="{l['terminologiya']}#residencia-temporal">Residencia Temporal</a>) o la permanente
+    (<a href="{l['terminologiya']}#residencia-permanente">Residencia Permanente</a>) —
+    las fuentes no describen una vía aparte de «visa de trabajo» separada de la residencia. Sin
+    una residencia vigente, el empleo formal no es posible. La lista de documentos para
+    tramitarla está en la página <a href="{l['dok-temporal']}">«Documentos para la residencia
+    temporal»</a>.</p>
 
     <h2>Cédula de identidad paraguaya</h2>
-    <p>Desde agosto de 2024, la cédula paraguaya puede obtenerse ya con el estatus de residente
-    temporal — antes solo estaba disponible para residentes permanentes. Lista reciente (al
-    momento de la revisión) de requisitos para un extranjero:</p>
+    <p>Desde agosto de 2024, la <a href="{l['terminologiya']}#cedula">cédula</a> paraguaya puede
+    obtenerse ya con el estatus de residente temporal — antes solo estaba disponible para
+    residentes permanentes. Lista reciente (al momento de la revisión) de requisitos para un
+    extranjero:</p>
     <ol>
-      <li>Certificado de Radicación (Permanente o Temporal) de la Dirección de Migraciones</li>
+      <li>Certificado de Radicación (Permanente o Temporal) de la Dirección de Migraciones
+      (<a href="{l['terminologiya']}#dnm">DNM</a>)</li>
       <li>copia autenticada del Carnet de Admisión</li>
       <li>copia autenticada del documento del país de origen con visación del MRE</li>
-      <li>partida de nacimiento — original con visación consular y apostilla</li>
+      <li>partida de nacimiento — original con visación consular y
+      <a href="{l['terminologiya']}#apostil">apostilla</a></li>
       <li>documentos sobre el estado civil, si corresponde</li>
       <li>Certificado de Vida y Residencia de la comisaría o del juzgado de paz</li>
       <li>certificado de antecedentes penales del país de origen (para mayores de 14 años)</li>
@@ -2289,8 +2302,8 @@ def build_rabota():
       <li>certificado de antecedentes en el propio Paraguay</li>
       <li>copia autenticada de la tarjeta de registro (registro)</li>
     </ol>
-    <p>Los documentos que no estén en español requieren traducción de un Traductor Público
-    matriculado.</p>
+    <p>Los documentos que no estén en español requieren traducción de un
+    <a href="{l['terminologiya']}#traductor-publico">Traductor Público matriculado</a>.</p>
 
     <h2>RUC — inscripción en el registro tributario</h2>
     <p>Tras obtener la Residencia Temporal surge la obligación de inscribir el
@@ -2330,8 +2343,9 @@ def build_rabota():
       empieza el estatus legal</li>
       <li><a href="{l['nalogi-inostrantsev']}">«Impuestos para extranjeros»</a> — tasas de IRE,
       IVA, IRP y la obligación del RUC</li>
-      <li><a href="{l['terminologiya']}#ips">«Terminología»: IPS</a> y
-      <a href="{l['terminologiya']}#cedula">Cédula</a> — definiciones breves</li>
+      <li><a href="{l['terminologiya']}#ips">«Terminología»: IPS</a>,
+      <a href="{l['terminologiya']}#cedula">Cédula</a> y
+      <a href="{l['terminologiya']}#ruc">RUC</a> — definiciones breves</li>
       <li><a href="{l['usluga-compliance']}">«Acompañamiento y cumplimiento»</a> — gestión de
       declaraciones tras el empleo</li>
     </ul>'''
@@ -2345,19 +2359,23 @@ def build_rabota():
 
     <h2>Residency — the mandatory precondition</h2>
     <p>The right to work legally comes from temporary
-    (<a href="{l['dok-temporal']}">Residencia Temporal</a>) or permanent residency — sources
-    don't describe a separate "work visa" track apart from residency. Without valid residency,
-    formal employment isn't possible.</p>
+    (<a href="{l['terminologiya']}#residencia-temporal">Residencia Temporal</a>) or permanent
+    (<a href="{l['terminologiya']}#residencia-permanente">Residencia Permanente</a>) residency —
+    sources don't describe a separate "work visa" track apart from residency. Without valid
+    residency, formal employment isn't possible. The document checklist for applying is on the
+    <a href="{l['dok-temporal']}">"Documents for Temporary Residency"</a> page.</p>
 
     <h2>Paraguayan cédula de identidad</h2>
-    <p>Since August 2024, the Paraguayan cédula has been available already at temporary-resident
-    status — previously it was available only to permanent residents. A recent (as of this
-    check) list of requirements for a foreigner:</p>
+    <p>Since August 2024, the Paraguayan <a href="{l['terminologiya']}#cedula">cédula</a> has
+    been available already at temporary-resident status — previously it was available only to
+    permanent residents. A recent (as of this check) list of requirements for a foreigner:</p>
     <ol>
-      <li>Certificado de Radicación (Permanent or Temporary) from the immigration service</li>
+      <li>Certificado de Radicación (Permanent or Temporary) from the immigration service
+      (<a href="{l['terminologiya']}#dnm">DNM</a>)</li>
       <li>a certified copy of the Carnet de Admisión</li>
       <li>a certified copy of the home-country ID document with a foreign-ministry visa stamp</li>
-      <li>birth certificate — original, with consular legalization and apostille</li>
+      <li>birth certificate — original, with consular legalization and an
+      <a href="{l['terminologiya']}#apostil">apostille</a></li>
       <li>civil-status documents, where applicable</li>
       <li>Certificado de Vida y Residencia from the local police commissariat or justice of the
       peace</li>
@@ -2366,8 +2384,9 @@ def build_rabota():
       <li>a police-clearance certificate from Paraguay itself</li>
       <li>a certified copy of the registration card (registro)</li>
     </ol>
-    <p>Documents not in Spanish need translation by a registered sworn translator (Traductor
-    Público matriculado).</p>
+    <p>Documents not in Spanish need translation by a registered
+    <a href="{l['terminologiya']}#traductor-publico">sworn translator (Traductor Público
+    matriculado)</a>.</p>
 
     <h2>RUC — tax registration</h2>
     <p>Once Residencia Temporal is granted, registering an <a href="{l['terminologiya']}#ruc">RUC</a>
@@ -2406,8 +2425,9 @@ def build_rabota():
       status starts</li>
       <li><a href="{l['nalogi-inostrantsev']}">"Taxes for Foreigners"</a> — IRE, IVA, and IRP
       rates, and the RUC obligation</li>
-      <li><a href="{l['terminologiya']}#ips">"Terminology": IPS</a> and
-      <a href="{l['terminologiya']}#cedula">Cédula</a> — short definitions</li>
+      <li><a href="{l['terminologiya']}#ips">"Terminology": IPS</a>,
+      <a href="{l['terminologiya']}#cedula">Cédula</a>, and
+      <a href="{l['terminologiya']}#ruc">RUC</a> — short definitions</li>
       <li><a href="{l['usluga-compliance']}">"Ongoing Compliance"</a> — handling filings after
       you start working</li>
     </ul>'''
@@ -2422,21 +2442,27 @@ def build_rabota():
 
     <h2>Aufenthaltserlaubnis — zwingende Voraussetzung</h2>
     <p>Das Recht, legal zu arbeiten, entsteht durch die befristete
-    (<a href="{l['dok-temporal']}">Residencia Temporal</a>) oder unbefristete
-    Aufenthaltserlaubnis — Quellen beschreiben keinen gesonderten „Arbeitsvisum"-Weg neben der
-    Aufenthaltserlaubnis. Ohne gültige Aufenthaltserlaubnis ist eine formelle Beschäftigung
-    nicht möglich.</p>
+    (<a href="{l['terminologiya']}#residencia-temporal">Residencia Temporal</a>) oder
+    unbefristete (<a href="{l['terminologiya']}#residencia-permanente">Residencia
+    Permanente</a>) Aufenthaltserlaubnis — Quellen beschreiben keinen gesonderten
+    „Arbeitsvisum"-Weg neben der Aufenthaltserlaubnis. Ohne gültige Aufenthaltserlaubnis ist eine
+    formelle Beschäftigung nicht möglich. Die Dokumentenliste für die Beantragung steht auf der
+    Seite <a href="{l['dok-temporal']}">„Dokumente für die befristete
+    Aufenthaltserlaubnis"</a>.</p>
 
     <h2>Paraguayische Cédula de identidad</h2>
-    <p>Seit August 2024 kann die paraguayische Cédula bereits mit dem Status eines befristeten
-    Residenten beantragt werden — zuvor stand sie nur unbefristeten Residenten offen. Eine
-    aktuelle (Stand der Prüfung) Liste der Anforderungen für Ausländer:</p>
+    <p>Seit August 2024 kann die paraguayische <a href="{l['terminologiya']}#cedula">Cédula</a>
+    bereits mit dem Status eines befristeten Residenten beantragt werden — zuvor stand sie nur
+    unbefristeten Residenten offen. Eine aktuelle (Stand der Prüfung) Liste der Anforderungen für
+    Ausländer:</p>
     <ol>
-      <li>Certificado de Radicación (unbefristet oder befristet) von der Migrationsbehörde</li>
+      <li>Certificado de Radicación (unbefristet oder befristet) von der Migrationsbehörde
+      (<a href="{l['terminologiya']}#dnm">DNM</a>)</li>
       <li>beglaubigte Kopie des Carnet de Admisión</li>
       <li>beglaubigte Kopie des Ausweisdokuments aus dem Herkunftsland mit Visasichtvermerk des
       Außenministeriums</li>
-      <li>Geburtsurkunde — Original mit konsularischer Beglaubigung und Apostille</li>
+      <li>Geburtsurkunde — Original mit konsularischer Beglaubigung und
+      <a href="{l['terminologiya']}#apostil">Apostille</a></li>
       <li>Dokumente zum Familienstand, sofern zutreffend</li>
       <li>Certificado de Vida y Residencia vom Kommissariat oder Friedensrichter</li>
       <li>polizeiliches Führungszeugnis aus dem Herkunftsland (ab 14 Jahren)</li>
@@ -2444,8 +2470,9 @@ def build_rabota():
       <li>polizeiliches Führungszeugnis aus Paraguay selbst</li>
       <li>beglaubigte Kopie der Registrierungskarte (registro)</li>
     </ol>
-    <p>Nicht-spanischsprachige Dokumente benötigen eine Übersetzung durch einen vereidigten,
-    beim Obersten Gerichtshof registrierten Übersetzer (Traductor Público matriculado).</p>
+    <p>Nicht-spanischsprachige Dokumente benötigen eine Übersetzung durch einen
+    <a href="{l['terminologiya']}#traductor-publico">vereidigten, beim Obersten Gerichtshof
+    registrierten Übersetzer (Traductor Público matriculado)</a>.</p>
 
     <h2>RUC — steuerliche Erfassung</h2>
     <p>Nach Erhalt der Residencia Temporal entsteht die Pflicht, sich beim
@@ -2486,8 +2513,9 @@ def build_rabota():
       womit der rechtliche Status beginnt</li>
       <li><a href="{l['nalogi-inostrantsev']}">„Steuern für Ausländer"</a> — Sätze von IRE,
       IVA, IRP und die RUC-Pflicht</li>
-      <li><a href="{l['terminologiya']}#ips">„Terminologie": IPS</a> und
-      <a href="{l['terminologiya']}#cedula">Cédula</a> — kurze Definitionen</li>
+      <li><a href="{l['terminologiya']}#ips">„Terminologie": IPS</a>,
+      <a href="{l['terminologiya']}#cedula">Cédula</a> und
+      <a href="{l['terminologiya']}#ruc">RUC</a> — kurze Definitionen</li>
       <li><a href="{l['usluga-compliance']}">„Begleitung und Compliance"</a> — laufende
       Erklärungsführung nach dem Arbeitsbeginn</li>
     </ul>'''
