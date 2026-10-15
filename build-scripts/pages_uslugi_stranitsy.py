@@ -273,7 +273,8 @@ PAGES = {
     <h2>После Temporal: обязательный комплаенс</h2>
     <p>После получения Residencia Temporal возникает обязанность зарегистрировать
     <a href="{l['terminologiya']}#ruc">RUC</a> (привязан к
-    <a href="{l['terminologiya']}#cedula">Cédula</a>) и регулярно подавать налоговую отчётность,
+    <a href="{l['terminologiya']}#cedula">Cédula</a>; после получения Cédula (CI) RUC оформляется, как
+    правило, в среднем за 3–6 дней) и регулярно подавать налоговую отчётность,
     включая нулевую, если деятельности не было — это отдельная услуга (см. карточку
     «Сопровождение и комплаенс» на странице <a href="{l['uslugi']}">«Услуги»</a>), без которой
     перевод в постоянную резиденцию рискует растянуться или сорваться.</p>
@@ -421,18 +422,16 @@ PAGES = {
     Temporal</a> по общему закону о миграции, где удалённая работа и контракт с иностранным
     (в данном случае — с релоцируемым) работодателем входят в пакет документов, подтверждающих
     источник дохода. Официального минимального порога дохода не установлено — миграционная
-    служба оценивает платёжеспособность по выпискам и контрактам. Рассмотрение занимает
-    60–90 дней. На практике это означает, что «релокация команды» — не одна процедура, а
+    служба оценивает платёжеспособность по выпискам и контрактам. Рассмотрение, по опыту,
+    как правило занимает около 8 недель, но может отличаться. На практике это означает, что «релокация команды» — не одна процедура, а
     несколько параллельных дел по резидентуре, только с корпоративными документами (контракт,
     выписки компании) вместо части личных.</p>
 
     <h2>Стоимость</h2>
-    <p>Пакет складывается из уже существующих услуг — открытия компании, резидентуры на каждого
-    сотрудника и абонемента на комплаенс — плюс отдельный компонент по Maquila при
-    необходимости. Итоговую стоимость и состав пакета мы считаем индивидуально: она зависит от
-    выбранной организационно-правовой формы, числа переезжающих сотрудников и того, нужен ли
-    режим Maquila. Полный прайс по отдельным компонентам — на странице
-    <a href="{l['stoimost']}">«Стоимость и тарифы»</a>.</p>
+    <p>Цена определяется индивидуально по каждому случаю — по часовой ставке, в зависимости от
+    числа сотрудников, необходимости режима Maquila и других факторов. Фиксированной цены
+    «пакета релокации» нет. Ориентиры по отдельным услугам (например, по резидентуре) — на
+    странице <a href="{l['stoimost']}">«Стоимость и тарифы»</a>.</p>
 
     <h2>Смотрите также</h2>
     <ul>
@@ -521,18 +520,16 @@ PAGES = {
     de migraciones, donde el trabajo remoto y el contrato con el empleador extranjero (en este caso,
     la empresa que se relocaliza) forman parte del paquete de documentos que acreditan la fuente de
     ingresos. No existe un umbral mínimo de ingresos oficialmente establecido — el servicio de
-    migraciones evalúa la solvencia según los extractos y los contratos. La revisión toma de 60 a 90
-    días. En la práctica, esto significa que la «relocalización del equipo» no es un único trámite,
+    migraciones evalúa la solvencia según los extractos y los contratos. La revisión, según nuestra
+    experiencia, suele tomar unas 8 semanas, aunque puede variar. En la práctica, esto significa que la «relocalización del equipo» no es un único trámite,
     sino varios expedientes paralelos de residencia, solo que con documentos corporativos (contrato,
     extractos de la empresa) en lugar de parte de los documentos personales.</p>
 
     <h2>Costo</h2>
-    <p>El paquete se compone de servicios ya existentes — apertura de empresa, residencia por cada
-    empleado y la suscripción de cumplimiento — más un componente aparte por Maquila si corresponde.
-    Calculamos el costo final y la composición del paquete de forma individual: depende de la forma
-    jurídica elegida, del número de empleados que se trasladan y de si se necesita el régimen
-    Maquila. El precio completo de cada componente por separado está en la página
-    <a href="{l['stoimost']}">«Costos y tarifas»</a>.</p>
+    <p>El precio se define de forma individual en cada caso — por tarifa horaria, según el número
+    de empleados, la necesidad del régimen Maquila y otros factores. No existe un precio fijo de
+    «paquete de relocalización». Las referencias de servicios individuales (por ejemplo, la
+    residencia) están en la página <a href="{l['stoimost']}">«Costos y tarifas»</a>.</p>
 
     <h2>Vea también</h2>
     <ul>
@@ -617,16 +614,15 @@ PAGES = {
     migration law, where remote work and a contract with the foreign (in this case, relocating)
     employer are part of the document package proving income source. There's no officially set
     minimum income threshold — the migration service assesses solvency from bank statements and
-    contracts. Review takes 60–90 days. In practice, this means "relocating the team" isn't one
+    contracts. In our experience, review usually takes about 8 weeks, but it can vary. In practice, this means "relocating the team" isn't one
     procedure but several parallel residency cases, just with corporate documents (contract, company
     statements) instead of some of the personal ones.</p>
 
     <h2>Cost</h2>
-    <p>The package is built from already-existing services — company formation, residency for each
-    employee, and the compliance subscription — plus a separate Maquila component where needed. We
-    calculate the final cost and package composition individually: it depends on the legal form
-    chosen, the number of relocating employees, and whether the Maquila regime is needed. Full
-    pricing for the individual components is on the <a href="{l['stoimost']}">"Pricing"</a> page.</p>
+    <p>The price is set individually for each case — at an hourly rate, depending on the number of
+    employees, whether the Maquila regime is needed, and other factors. There's no fixed
+    "relocation package" price. Reference prices for individual services (such as residency) are
+    on the <a href="{l['stoimost']}">"Pricing"</a> page.</p>
 
     <h2>See also</h2>
     <ul>
@@ -716,18 +712,17 @@ PAGES = {
     Migrationsgesetz, bei der Remote-Arbeit und ein Vertrag mit dem ausländischen (in diesem Fall dem
     relokierenden) Arbeitgeber Teil des Dokumentenpakets sind, das die Einkommensquelle belegt. Eine
     offiziell festgelegte Mindesteinkommensgrenze gibt es nicht — die Migrationsbehörde bewertet die
-    Zahlungsfähigkeit anhand von Kontoauszügen und Verträgen. Die Bearbeitung dauert 60–90 Tage. In
+    Zahlungsfähigkeit anhand von Kontoauszügen und Verträgen. Die Bearbeitung dauert nach Erfahrung in der Regel etwa 8 Wochen, kann aber abweichen. In
     der Praxis bedeutet das: Die „Relokation des Teams" ist kein einzelnes Verfahren, sondern mehrere
     parallele Aufenthaltstitel-Verfahren, nur mit Unternehmensdokumenten (Vertrag, Kontoauszüge der
     Firma) anstelle eines Teils der persönlichen Unterlagen.</p>
 
     <h2>Kosten</h2>
-    <p>Das Paket setzt sich aus bereits bestehenden Leistungen zusammen — Firmengründung,
-    Aufenthaltstitel für jeden Mitarbeiter und das Compliance-Abonnement — plus einer gesonderten
-    Komponente für Maquila bei Bedarf. Den endgültigen Preis und die Zusammensetzung des Pakets
-    berechnen wir individuell: Er hängt von der gewählten Rechtsform, der Anzahl der umziehenden
-    Mitarbeiter und davon ab, ob das Maquila-Regime benötigt wird. Die vollständigen Preise der
-    einzelnen Komponenten stehen auf der Seite <a href="{l['stoimost']}">„Preise"</a>.</p>
+    <p>Der Preis wird für jeden Fall individuell festgelegt — nach Stundensatz, abhängig von der
+    Anzahl der Mitarbeiter, davon, ob das Maquila-Regime benötigt wird, und weiteren Faktoren.
+    Einen festen Preis für ein „Relokationspaket" gibt es nicht. Richtwerte für einzelne
+    Leistungen (etwa den Aufenthaltstitel) stehen auf der Seite
+    <a href="{l['stoimost']}">„Preise"</a>.</p>
 
     <h2>Siehe auch</h2>
     <ul>
@@ -745,10 +740,10 @@ PAGES = {
 },
 "usluga-medicina": {
 "ru": dict(
-    title="Медицинское сопровождение в Парагвае: страховка и помощь на приёме | Grund Paraguay",
-    description="Подбор медицинской страховки в Парагвае, разбор условий (сроки ожидания, декларация о здоровье) и сопровождение на приёме — для тех, кто переезжает и не готов разбираться в этом на испанском в одиночку.",
+    title="Медицинское сопровождение в Парагвае: переводчик у врача и подсказка по страховке | Grund Paraguay",
+    description="Переводчик на приёме у врача с почасовой оплатой и подсказка по медицинской страховке в Парагвае — в том числе рекомендация типичных, распространённых страховщиков.",
     h1="Медицинское сопровождение в Парагвае",
-    lead='Медицинское сопровождение — не полис сам по себе, а помощь на всех шагах вокруг него: подобрать план под свой статус, не упустить критичное условие в договоре и не остаться один на один с приёмной клиники на испанском. Отдельной государственной услуги «страховка для иностранца» в Парагвае не существует — мы собираем результат из уже существующих на рынке планов и своей работы вокруг них.',
+    lead='Медицинское сопровождение у нас — это две вещи: переводчик на приёме у врача с почасовой оплатой и подсказка по медицинской страховке, включая рекомендацию типичных, распространённых страховщиков. Сам полис вы оформляете напрямую у страховой компании.',
     body=lambda l: f'''
     <p>Систему медицины в Парагвае мы разбираем подробно на отдельной странице
     <a href="{l['meditsina-v-paragvae']}">«Медицина в Парагвае»</a> — здесь коротко: три уровня
@@ -758,23 +753,12 @@ PAGES = {
 
     <h2>Из чего состоит сопровождение</h2>
     <ul>
-      <li><strong>Подбор плана</strong> — сверяем предложения локальных страховщиков (например,
-      MAPFRE Paraguay, Asismed) и международных полисов с вашим статусом и бюджетом. У части
-      локальных планов есть условия, которые сразу отсекают часть заявителей — например, MAPFRE
-      Paraguay требует статус постоянного резидента; на этапе временной резиденции такой план
-      просто недоступен, и лучше знать это заранее, а не после отказа.</li>
-      <li><strong>Разбор мелкого шрифта</strong> — сроки ожидания («carencias») перед покрытием
-      конкретных состояний, обязательная декларация о здоровье при оформлении, список исключений.
-      У локальных планов эти условия могут быть весьма жёсткими: например, у одного из
-      распространённых планов — необходимость задекларировать хронические заболевания заранее (6
-      месяцев ожидания на задекларированные, минимум 12 — на онкологию и болезни почек/печени, а
-      незадекларированные не покрываются вообще).</li>
-      <li><strong>Сопровождение на приёме</strong> — перевод, помощь с документами на месте и
-      объяснение счёта: частные клиники в Парагвае обычно требуют оплату сразу, без ожидания
-      возмещения от страховой.</li>
-      <li><strong>Помощь с обращением за выплатой</strong> — сроки подачи документов по страховому
-      случаю могут быть короткими (у отдельных планов — 48 часов), и мы следим, чтобы вы не
-      пропустили этот срок в чужой стране на незнакомом языке.</li>
+      <li><strong>Переводчик на приёме — по часам</strong> — сопровождаем к врачу или в клинику
+      и переводим на месте; оплата почасовая.</li>
+      <li><strong>Подсказка по страховке</strong> — объясняем, на что смотреть при выборе
+      медицинской страховки, и можем порекомендовать типичных, распространённых страховщиков.
+      Подробный разбор условий конкретных страховщиков и ведение страхового случая в услугу не
+      входят — договор страхования вы заключаете и ведёте напрямую со страховой компанией.</li>
     </ul>
 
     <h2>Почему это вообще нужно</h2>
@@ -785,19 +769,10 @@ PAGES = {
     оплаты на месте — то есть страховка нужна не «на всякий случай», а как рабочий инструмент,
     которым придётся пользоваться в первый же год.</p>
 
-    <h2>Что не входит на старте</h2>
-    <p>Оформление IPS (для тех, кто официально трудоустроен в Парагвае или регистрирует
-    микропредприятие) — отдельный процесс через работодателя, который выходит за рамки этой
-    услуги на старте; при необходимости обсуждаем это отдельно, а не включаем в пакет по
-    умолчанию.</p>
-
     <h2>Стоимость</h2>
-    <p>Мы не нашли на рынке предложения, где организация страховки и сопровождение продавались
-    бы как одна услуга специально для переезжающих в Парагвай, — устоявшегося рыночного
-    ориентира по цене такой услуги попросту нет. Стоимость самих страховых планов у локальных и
-    международных страховщиков публично не раскрывается (индивидуальный расчёт по возрасту и
-    состоянию здоровья) — состав и стоимость нашего сопровождения тоже считаем индивидуально,
-    после того как понятен ваш статус и то, какой план рассматривается.</p>
+    <p>Работа переводчика оплачивается по часовой ставке — её мы называем при обращении. Стоимость
+    самих страховых планов страховщики рассчитывают индивидуально (по возрасту и состоянию
+    здоровья) и публично не раскрывают.</p>
 
     <h2>Смотрите также</h2>
     <ul>
@@ -809,15 +784,15 @@ PAGES = {
       переезде</li>
     </ul>
     ''',
-    final_h2="Разбираетесь, какая страховка вам подходит?",
-    final_p="Сверим варианты с вашим статусом резидентства и бюджетом и объясним условия, которые легко упустить в договоре на испанском.",
+    final_h2="Нужен переводчик у врача или совет по страховке?",
+    final_p="Сопроводим на приём как переводчик и подскажем, на каких распространённых страховщиков стоит посмотреть при вашем статусе.",
     final_cta="Оставить заявку на консультацию",
 ),
 "es": dict(
-    title="Asistencia médica en Paraguay: seguro y acompañamiento en la consulta | Grund Paraguay",
-    description="Selección de seguro médico en Paraguay, análisis de las condiciones (períodos de carencia, declaración jurada de salud) y acompañamiento en la consulta — para quienes se mudan y no quieren enfrentar esto en español por su cuenta.",
+    title="Asistencia médica en Paraguay: intérprete en la consulta y orientación sobre el seguro | Grund Paraguay",
+    description="Intérprete en la consulta médica con tarifa por hora y orientación sobre el seguro médico en Paraguay — incluida la recomendación de aseguradoras típicas y habituales.",
     h1="Asistencia médica en Paraguay",
-    lead='La asistencia médica no es la póliza en sí, sino la ayuda en todos los pasos alrededor de ella: elegir el plan adecuado a su estatus, no pasar por alto una condición crítica del contrato y no quedarse solo frente a la recepción de una clínica en español. En Paraguay no existe un trámite estatal independiente de «seguro para extranjeros» — armamos el resultado a partir de los planes que ya existen en el mercado y de nuestro trabajo alrededor de ellos.',
+    lead='Nuestra asistencia médica son dos cosas: un intérprete en la consulta médica, con tarifa por hora, y orientación sobre el seguro médico, incluida la recomendación de aseguradoras típicas y habituales. La póliza la contrata usted directamente con la aseguradora.',
     body=lambda l: f'''
     <p>Analizamos en detalle el sistema de salud en Paraguay en una página aparte,
     <a href="{l['meditsina-v-paragvae']}">«Medicina en Paraguay»</a> — aquí, en breve: tres
@@ -827,26 +802,13 @@ PAGES = {
 
     <h2>De qué se compone la asistencia</h2>
     <ul>
-      <li><strong>Selección del plan</strong> — comparamos las ofertas de aseguradoras locales
-      (por ejemplo, MAPFRE Paraguay, Asismed) y de pólizas internacionales con su estatus y
-      presupuesto. Algunos planes locales tienen condiciones que descartan de entrada a parte de
-      los solicitantes — por ejemplo, MAPFRE Paraguay exige el estatus de residente permanente;
-      en la etapa de residencia temporal ese plan simplemente no está disponible, y es mejor
-      saberlo con anticipación, no después de un rechazo.</li>
-      <li><strong>Análisis de la letra pequeña</strong> — los períodos de carencia antes de
-      cubrir condiciones concretas, la declaración jurada de salud obligatoria al contratar, la
-      lista de exclusiones. En los planes locales estas condiciones pueden ser bastante
-      estrictas: por ejemplo, en uno de los planes más difundidos hay que declarar por
-      anticipado las enfermedades crónicas (6 meses de carencia para las declaradas, mínimo 12
-      para cáncer y enfermedades renales/hepáticas, y las no declaradas no se cubren en
-      absoluto).</li>
-      <li><strong>Acompañamiento en la consulta</strong> — traducción, ayuda con los documentos
-      en el lugar y explicación de la factura: las clínicas privadas en Paraguay suelen exigir
-      el pago de inmediato, sin esperar el reembolso de la aseguradora.</li>
-      <li><strong>Ayuda para reclamar el reembolso</strong> — los plazos para presentar los
-      documentos de un siniestro pueden ser cortos (en algunos planes, 48 horas), y nos
-      aseguramos de que no pierda ese plazo en un país extranjero y en un idioma que no
-      domina.</li>
+      <li><strong>Intérprete en la consulta, por hora</strong> — lo acompañamos al médico o a la
+      clínica y traducimos en el lugar; se cobra por hora.</li>
+      <li><strong>Orientación sobre el seguro</strong> — le explicamos en qué fijarse al elegir un
+      seguro médico y podemos recomendarle aseguradoras típicas y habituales. El análisis
+      detallado de las condiciones de aseguradoras concretas y la gestión de siniestros no forman
+      parte del servicio — el contrato de seguro lo firma y gestiona usted directamente con la
+      aseguradora.</li>
     </ul>
 
     <h2>Por qué esto es realmente necesario</h2>
@@ -857,20 +819,10 @@ PAGES = {
     privadas suelen exigir el pago inmediato en el lugar — es decir, el seguro no es «por si
     acaso», sino una herramienta de trabajo que tendrá que usar ya en el primer año.</p>
 
-    <h2>Qué no incluye al principio</h2>
-    <p>La gestión del IPS (para quienes están formalmente empleados en Paraguay o registran una
-    microempresa) es un trámite aparte a través del empleador, que queda fuera del alcance de
-    este servicio al principio; si hace falta, lo tratamos por separado, no lo incluimos en el
-    paquete por defecto.</p>
-
     <h2>Costo</h2>
-    <p>No encontramos en el mercado una oferta donde la gestión del seguro y el acompañamiento
-    se vendieran como un solo servicio específicamente para quienes se mudan a Paraguay —
-    sencillamente no existe un punto de referencia de precio consolidado para ese servicio. El
-    costo de los propios planes de seguro de las aseguradoras locales e internacionales no se
-    publica de forma pública (cálculo individual según la edad y el estado de salud) — la
-    composición y el costo de nuestro acompañamiento también los calculamos de forma individual,
-    una vez que su estatus está claro y qué plan se está considerando.</p>
+    <p>El trabajo del intérprete se cobra por tarifa horaria, que le indicamos al contactarnos. El
+    costo de los propios planes de seguro lo calculan las aseguradoras de forma individual (según
+    la edad y el estado de salud) y no se publica.</p>
 
     <h2>Vea también</h2>
     <ul>
@@ -882,15 +834,15 @@ PAGES = {
       salud al mudarse</li>
     </ul>
     ''',
-    final_h2="¿Está evaluando qué seguro le conviene?",
-    final_p="Comparamos las opciones con su estatus de residencia y presupuesto, y le explicamos las condiciones que son fáciles de pasar por alto en un contrato en español.",
+    final_h2="¿Necesita un intérprete en el médico o un consejo sobre el seguro?",
+    final_p="Lo acompañamos a la consulta como intérpretes y le indicamos qué aseguradoras habituales conviene mirar según su estatus.",
     final_cta="Solicitar una consulta",
 ),
 "en": dict(
-    title="Medical support in Paraguay: insurance and support at the doctor's office | Grund Paraguay",
-    description="Choosing medical insurance in Paraguay, working through the terms (waiting periods, health declaration), and support at appointments — for anyone relocating who isn't ready to handle this in Spanish alone.",
+    title="Medical support in Paraguay: an interpreter at the doctor's and insurance pointers | Grund Paraguay",
+    description="An interpreter at medical appointments, billed by the hour, and pointers on health insurance in Paraguay — including recommendations of typical, widely used insurers.",
     h1="Medical support in Paraguay",
-    lead='Medical support isn\'t the policy itself — it\'s help with everything around it: choosing a plan that fits your status, not missing a critical condition in the contract, and not being left alone at a clinic\'s front desk in Spanish. There\'s no separate government service for "insurance for foreigners" in Paraguay — we put the result together from the plans already on the market and our own work around them.',
+    lead="Our medical support is two things: an interpreter at medical appointments, billed by the hour, and pointers on health insurance, including recommendations of typical, widely used insurers. You take out the policy directly with the insurer.",
     body=lambda l: f'''
     <p>We cover Paraguay's healthcare system in detail on a separate page,
     <a href="{l['meditsina-v-paragvae']}">"Healthcare in Paraguay"</a> — here, in short: three
@@ -900,23 +852,12 @@ PAGES = {
 
     <h2>What the support includes</h2>
     <ul>
-      <li><strong>Plan selection</strong> — we compare offers from local insurers (e.g., MAPFRE
-      Paraguay, Asismed) and international policies against your status and budget. Some local
-      plans have conditions that rule out part of applicants right away — for example, MAPFRE
-      Paraguay requires permanent-resident status; at the temporary-residency stage that plan
-      simply isn't available, and it's better to know that in advance, not after a rejection.</li>
-      <li><strong>Reading the fine print</strong> — waiting periods ("carencias") before specific
-      conditions are covered, the mandatory health declaration at signup, the list of
-      exclusions. Local plans' terms can be quite strict: for example, one widespread plan
-      requires declaring chronic conditions in advance (6 months' waiting period for declared
-      ones, at least 12 for cancer and kidney/liver disease, and undeclared conditions aren't
-      covered at all).</li>
-      <li><strong>Support at appointments</strong> — translation, help with paperwork on the
-      spot, and explaining the bill: private clinics in Paraguay usually require payment right
-      away, without waiting for reimbursement from the insurer.</li>
-      <li><strong>Help filing a claim</strong> — deadlines for submitting claim documents can be
-      short (48 hours for some plans), and we make sure you don't miss that deadline in a
-      foreign country in an unfamiliar language.</li>
+      <li><strong>An interpreter at appointments, by the hour</strong> — we go with you to the
+      doctor or clinic and interpret on the spot; billed hourly.</li>
+      <li><strong>Insurance pointers</strong> — we explain what to look for when choosing health
+      insurance and can recommend typical, widely used insurers. A detailed review of specific
+      insurers' terms and handling insurance claims aren't part of the service — you sign and
+      manage the insurance contract directly with the insurer.</li>
     </ul>
 
     <h2>Why this actually matters</h2>
@@ -927,18 +868,10 @@ PAGES = {
     on-the-spot payment — meaning insurance isn't "just in case," it's a working tool you'll
     likely need in your first year.</p>
 
-    <h2>What's not included at the start</h2>
-    <p>Setting up IPS (for those formally employed in Paraguay or registering a microenterprise)
-    is a separate process through the employer, outside the scope of this service at the
-    outset; we discuss it separately if needed, rather than bundling it in by default.</p>
-
     <h2>Cost</h2>
-    <p>We didn't find an offer on the market where insurance arrangement and support are sold as
-    one service specifically for people relocating to Paraguay — there simply isn't an
-    established price benchmark for that. Pricing for the insurance plans themselves, from both
-    local and international insurers, isn't published publicly (it's calculated individually by
-    age and health status) — we calculate the scope and cost of our own support individually
-    too, once your status is clear and which plan is under consideration.</p>
+    <p>The interpreter's work is billed at an hourly rate, which we quote when you get in touch.
+    Insurers calculate the cost of the plans themselves individually (by age and health status)
+    and don't publish it.</p>
 
     <h2>See also</h2>
     <ul>
@@ -950,15 +883,15 @@ PAGES = {
       when relocating</li>
     </ul>
     ''',
-    final_h2="Working out which insurance fits you?",
-    final_p="We'll compare your options against your residency status and budget and explain the terms that are easy to miss in a Spanish-language contract.",
+    final_h2="Need an interpreter at the doctor's or advice on insurance?",
+    final_p="We'll come with you to the appointment as interpreters and point you to the widely used insurers worth looking at for your status.",
     final_cta="Request a consultation",
 ),
 "de": dict(
-    title="Medizinische Begleitung in Paraguay: Versicherung und Unterstützung beim Arztbesuch | Grund Paraguay",
-    description="Auswahl einer Krankenversicherung in Paraguay, Klärung der Bedingungen (Wartezeiten, Gesundheitserklärung) und Begleitung beim Arztbesuch — für alle, die umziehen und das nicht allein auf Spanisch klären möchten.",
+    title="Medizinische Begleitung in Paraguay: Dolmetscher beim Arzt und Versicherungstipps | Grund Paraguay",
+    description="Dolmetscher beim Arzttermin auf Stundenbasis und eine Orientierung zur Krankenversicherung in Paraguay — einschließlich Empfehlung typischer, verbreiteter Versicherer.",
     h1="Medizinische Begleitung in Paraguay",
-    lead='Medizinische Begleitung ist nicht die Police selbst, sondern Hilfe bei allen Schritten drumherum: den passenden Plan für den eigenen Status wählen, eine entscheidende Vertragsbedingung nicht übersehen und am Empfang einer Klinik nicht allein auf Spanisch dastehen. Ein eigenständiges staatliches Verfahren „Versicherung für Ausländer" gibt es in Paraguay nicht — wir setzen das Ergebnis aus den bereits am Markt vorhandenen Plänen und unserer Arbeit darum herum zusammen.',
+    lead='Medizinische Begleitung heißt bei uns zwei Dinge: ein Dolmetscher beim Arzttermin, abgerechnet nach Stunden, und eine Orientierung zur Krankenversicherung — einschließlich der Empfehlung typischer, verbreiteter Versicherer. Die Police selbst schließen Sie direkt beim Versicherer ab.',
     body=lambda l: f'''
     <p>Das Gesundheitssystem Paraguays behandeln wir ausführlich auf einer eigenen Seite,
     <a href="{l['meditsina-v-paragvae']}">„Medizin in Paraguay"</a> — hier kurz: drei Ebenen
@@ -969,26 +902,13 @@ PAGES = {
 
     <h2>Woraus die Begleitung besteht</h2>
     <ul>
-      <li><strong>Planauswahl</strong> — wir gleichen die Angebote lokaler Versicherer (z. B.
-      MAPFRE Paraguay, Asismed) und internationaler Policen mit Ihrem Status und Budget ab. Ein
-      Teil der lokalen Pläne hat Bedingungen, die einen Teil der Antragsteller sofort
-      ausschließen — MAPFRE Paraguay etwa verlangt den Status eines unbefristeten Residenten; in
-      der Phase des befristeten Aufenthalts ist ein solcher Plan schlicht nicht verfügbar, und
-      das sollte man vorher wissen, nicht erst nach einer Ablehnung.</li>
-      <li><strong>Prüfung des Kleingedruckten</strong> — Wartezeiten („carencias") vor der
-      Deckung bestimmter Zustände, die bei Vertragsabschluss verpflichtende
-      Gesundheitserklärung, die Liste der Ausschlüsse. Bei lokalen Plänen können diese
-      Bedingungen recht streng sein: Bei einem der verbreiteten Pläne müssen chronische
-      Erkrankungen zum Beispiel im Voraus angegeben werden (6 Monate Wartezeit für angegebene,
-      mindestens 12 für Krebs- sowie Nieren-/Lebererkrankungen, nicht angegebene Zustände werden
-      überhaupt nicht gedeckt).</li>
-      <li><strong>Begleitung beim Arztbesuch</strong> — Übersetzung, Hilfe mit Unterlagen vor Ort
-      und Erklärung der Rechnung: Private Kliniken in Paraguay verlangen die Zahlung in der
-      Regel sofort, ohne auf die Erstattung durch die Versicherung zu warten.</li>
-      <li><strong>Hilfe bei der Schadensmeldung</strong> — die Fristen für die Einreichung von
-      Unterlagen zu einem Versicherungsfall können kurz sein (bei manchen Plänen 48 Stunden),
-      und wir achten darauf, dass Sie diese Frist im fremden Land und in einer fremden Sprache
-      nicht verpassen.</li>
+      <li><strong>Dolmetscher beim Arzttermin — nach Stunden</strong> — wir begleiten Sie zum Arzt
+      oder in die Klinik und übersetzen vor Ort; abgerechnet wird stundenweise.</li>
+      <li><strong>Orientierung zur Versicherung</strong> — wir erklären, worauf es bei der Wahl
+      einer Krankenversicherung ankommt, und können typische, verbreitete Versicherer empfehlen.
+      Eine detaillierte Analyse der Bedingungen einzelner Versicherer und die Abwicklung von
+      Versicherungsfällen gehören nicht zur Leistung — den Versicherungsvertrag schließen und
+      führen Sie direkt mit dem Versicherer.</li>
     </ul>
 
     <h2>Warum das überhaupt nötig ist</h2>
@@ -1000,20 +920,10 @@ PAGES = {
     „für den Fall der Fälle", sondern ein Arbeitswerkzeug, das man bereits im ersten Jahr
     braucht.</p>
 
-    <h2>Was zu Beginn nicht enthalten ist</h2>
-    <p>Die Anmeldung bei der IPS (für formell in Paraguay Beschäftigte oder bei der Registrierung
-    eines Kleinunternehmens) ist ein eigenständiges Verfahren über den Arbeitgeber, das zu
-    Beginn außerhalb des Umfangs dieser Leistung liegt; bei Bedarf klären wir das gesondert,
-    statt es standardmäßig ins Paket aufzunehmen.</p>
-
     <h2>Kosten</h2>
-    <p>Wir haben am Markt kein Angebot gefunden, bei dem die Organisation der Versicherung und
-    die Begleitung als eine Leistung speziell für Umziehende nach Paraguay verkauft würden —
-    einen etablierten Preisrichtwert für eine solche Leistung gibt es schlicht nicht. Die Kosten
-    der Versicherungspläne selbst geben weder lokale noch internationale Versicherer öffentlich
-    bekannt (individuelle Berechnung nach Alter und Gesundheitszustand) — Umfang und Kosten
-    unserer eigenen Begleitung berechnen wir ebenfalls individuell, sobald Ihr Status und der ins
-    Auge gefasste Plan feststehen.</p>
+    <p>Der Dolmetscher wird nach Stundensatz abgerechnet; den Satz nennen wir Ihnen bei der Anfrage.
+    Die Kosten der Versicherungspläne selbst berechnen die Versicherer individuell (nach Alter und
+    Gesundheitszustand) und veröffentlichen sie nicht.</p>
 
     <h2>Siehe auch</h2>
     <ul>
@@ -1025,8 +935,8 @@ PAGES = {
       Gesundheitsrisiken beim Umzug</li>
     </ul>
     ''',
-    final_h2="Sie klären, welche Versicherung zu Ihnen passt?",
-    final_p="Wir gleichen die Optionen mit Ihrem Aufenthaltsstatus und Budget ab und erklären die Bedingungen, die man in einem spanischsprachigen Vertrag leicht übersieht.",
+    final_h2="Brauchen Sie einen Dolmetscher beim Arzt oder einen Rat zur Versicherung?",
+    final_p="Wir begleiten Sie als Dolmetscher zum Termin und nennen Ihnen verbreitete Versicherer, die für Ihren Status infrage kommen.",
     final_cta="Beratung anfragen",
 ),
 },
@@ -1241,32 +1151,33 @@ PAGES = {
 },
 "usluga-citizenship": {
 "ru": dict(
-    title="Гражданство Парагвая: сроки, документы, Corte Suprema | Grund Paraguay",
-    description="Натурализация в Парагвае: 3 года после Residencia Permanente (ст. 148 Конституции), дело ведёт Верховный суд, реалистичный полный срок от переезда до паспорта — 7–8 лет.",
+    title="Гражданство Парагвая: сроки, экзамен, стоимость | Grund Paraguay",
+    description="Натурализация в Парагвае коротко: подача через 3–5 лет при наличии Cédula, экзамен на знание основ государства на испанском, госпошлина ₲ 43 051, сопровождение с адвокатом — ориентировочно от 5000 USD.",
     h1="Гражданство Парагвая",
     lead='Гражданство Парагвая — статус, который даёт паспорт с безвизовым доступом примерно в 145 стран (Henley Passport Index) и более устойчивое правовое положение, чем резиденция.',
     body=lambda l: f'''
-    <p>Натурализация — не альтернатива резидентуре, а её логичное продолжение для тех, кто хочет
-    более устойчивый статус, чем Residencia Permanente, и готов ждать ещё несколько лет сверху.</p>
+    <p>Это краткая справочная страница: гражданство мы не предлагаем как отдельную продаваемую
+    услугу. Здесь — основные ориентиры для тех, кто после резидентуры планирует дойти до
+    паспорта.</p>
 
-    <h2>Когда это становится возможно</h2>
-    <p>Натурализация возможна не раньше чем через 3 года после получения
-    <a href="{l['terminologiya']}#residencia-permanente">Residencia Permanente</a> (ст. 148
-    Конституции Парагвая) — то есть реалистичный полный срок от переезда до паспорта складывается
-    в 7–8 лет, а не «год», как иногда обещают на рынке.</p>
+    <h2>Когда можно подать</h2>
+    <p>По нашему опыту, подать на натурализацию можно через 3–5 лет при наличии парагвайской
+    <a href="{l['terminologiya']}#cedula">Cédula</a> (правовая основа — ст. 148 Конституции
+    Парагвая). «Гражданства за год», которое иногда обещают на рынке, не бывает.</p>
 
-    <h2>Путь от переезда до паспорта</h2>
-    <div class="diagram">
-      {_CITIZENSHIP_SVG['ru']}
-      <p class="diagram-caption">Таймлайн из уже опубликованных диапазонов: Temporal (до 2 лет) →
-      Permanente (обычно 2–5 лет) → обязательное ожидание 3 года перед подачей на натурализацию.</p>
-    </div>
+    <h2>Экзамен на испанском</h2>
+    <p>При подаче на гражданство нужно сдать экзамен на знание основ государства — на испанском
+    языке. Это требование действует.</p>
 
     <h2>Кто ведёт дело</h2>
     <p>Дело о натурализации ведёт не миграционная служба, а Верховный суд
     (<a href="{l['terminologiya']}#corte-suprema">Corte Suprema de Justicia</a>); процедура
-    требует личной явки и сопровождения адвоката — это отдельный процесс со своими сроками, не
-    продолжение резидентского дела по инерции.</p>
+    требует личной явки и сопровождения адвоката.</p>
+
+    <h2>Стоимость</h2>
+    <p>Госпошлина — ₲ 43 051: это государственный сбор (источник — Poder Judicial). Стоимость
+    полного сопровождения с адвокатом (адвокат, сборы и т. д., без госпошлины) — ориентировочно
+    от 5000 USD, точная сумма уточняется индивидуально.</p>
 
     <h2>Документы</h2>
     <p>Полный список документов на натурализацию — на странице
@@ -1281,40 +1192,39 @@ PAGES = {
       <li><a href="{l['keisy']}">«Кейсы и отзывы»</a> — типичные истории клиентов</li>
     </ul>
     ''',
-    final_h2="Планируете дойти до гражданства?",
-    final_p="Оценим сроки конкретно по вашей ситуации и проверим документы до подачи в Corte Suprema.",
+    final_h2="Есть вопросы о гражданстве?",
+    final_p="Сориентируем по срокам и стоимости в вашей ситуации.",
     final_cta="Оставить заявку на консультацию",
 ),
 "es": dict(
-    title="Ciudadanía paraguaya: plazos, documentos, Corte Suprema | Grund Paraguay",
-    description="Naturalización en Paraguay: 3 años después de la Residencia Permanente (art. 148 de la Constitución), la tramita la Corte Suprema, plazo real completo desde la mudanza hasta el pasaporte — 7–8 años.",
+    title="Ciudadanía paraguaya: plazos, examen, costo | Grund Paraguay",
+    description="La naturalización en Paraguay en breve: solicitud a los 3–5 años con Cédula, examen sobre los fundamentos del Estado en español, arancel de ₲ 43.051, acompañamiento con abogado desde unos 5000 USD.",
     h1="Ciudadanía paraguaya",
     lead='La ciudadanía paraguaya otorga un pasaporte con acceso sin visa a unos 145 países (Henley Passport Index) y un estatus jurídico más estable que la residencia.',
     body=lambda l: f'''
-    <p>La naturalización no es una alternativa a la residencia, sino su continuación lógica para
-    quienes quieren un estatus más estable que la Residencia Permanente y están dispuestos a
-    esperar algunos años más.</p>
+    <p>Esta es una página breve de referencia: no ofrecemos la ciudadanía como un servicio de
+    venta aparte. Aquí están los datos principales para quienes, después de la residencia,
+    piensan llegar hasta el pasaporte.</p>
 
-    <h2>Cuándo es posible</h2>
-    <p>La naturalización es posible recién 3 años después de obtener la
-    <a href="{l['terminologiya']}#residencia-permanente">Residencia Permanente</a> (art. 148 de la
-    Constitución de Paraguay) — es decir, el plazo real completo desde la mudanza hasta el
-    pasaporte es de 7 a 8 años, no «un año» como a veces se promete en el mercado.</p>
+    <h2>Cuándo se puede solicitar</h2>
+    <p>Según nuestra experiencia, la naturalización se puede solicitar a los 3–5 años, si se tiene
+    <a href="{l['terminologiya']}#cedula">Cédula</a> paraguaya (base legal: art. 148 de la
+    Constitución de Paraguay). La «ciudadanía en un año» que a veces se promete en el mercado no
+    existe.</p>
 
-    <h2>El camino desde la mudanza hasta el pasaporte</h2>
-    <div class="diagram">
-      {_CITIZENSHIP_SVG['es']}
-      <p class="diagram-caption">Cronología basada en rangos ya publicados: Temporal (hasta 2
-      años) → Permanente (normalmente 2–5 años) → espera obligatoria de 3 años antes de solicitar
-      la naturalización.</p>
-    </div>
+    <h2>Examen en español</h2>
+    <p>Al solicitar la ciudadanía hay que aprobar un examen sobre los fundamentos del Estado — en
+    español. Este requisito está vigente.</p>
 
     <h2>Quién tramita el caso</h2>
     <p>El trámite de naturalización lo lleva la Corte Suprema
     (<a href="{l['terminologiya']}#corte-suprema">Corte Suprema de Justicia</a>), no la DNM; el
-    procedimiento requiere comparecencia personal y el acompañamiento de un abogado — es un
-    proceso aparte con sus propios plazos, no una continuación automática del trámite de
-    residencia.</p>
+    procedimiento requiere comparecencia personal y el acompañamiento de un abogado.</p>
+
+    <h2>Costo</h2>
+    <p>Arancel: ₲ 43.051 — es una tasa estatal (fuente: Poder Judicial). El acompañamiento completo
+    con abogado (abogado, tasas, etc., sin el arancel) cuesta aproximadamente desde 5000 USD; el
+    monto exacto se confirma de forma individual.</p>
 
     <h2>Documentos</h2>
     <p>La lista completa de documentos para la naturalización está en la página
@@ -1328,40 +1238,37 @@ PAGES = {
       <li><a href="{l['keisy']}">«Casos y testimonios»</a> — historias típicas de clientes</li>
     </ul>
     ''',
-    final_h2="¿Piensa llegar hasta la ciudadanía?",
-    final_p="Evaluamos los plazos según su situación concreta y verificamos los documentos antes de presentarlos ante la Corte Suprema.",
+    final_h2="¿Tiene preguntas sobre la ciudadanía?",
+    final_p="Le orientamos sobre plazos y costos según su situación.",
     final_cta="Solicitar una consulta",
 ),
 "en": dict(
-    title="Paraguayan Citizenship: Timeline, Documents, the Supreme Court | Grund Paraguay",
-    description="Naturalization in Paraguay: 3 years after Residencia Permanente (Art. 148 of the Constitution), the case is handled by the Supreme Court, realistic full timeline from moving to a passport — 7–8 years.",
+    title="Paraguayan Citizenship: Timeline, Exam, Cost | Grund Paraguay",
+    description="Naturalization in Paraguay in brief: apply after 3–5 years with a Cédula, an exam on the fundamentals of the state in Spanish, a ₲43,051 government fee, support with a lawyer from about 5,000 USD.",
     h1="Paraguayan Citizenship",
     lead="Paraguayan citizenship grants a passport with visa-free access to roughly 145 countries (Henley Passport Index) and a more stable legal status than residency.",
     body=lambda l: f'''
-    <p>Naturalization isn't an alternative to residency — it's its logical continuation for those
-    who want a more stable status than Residencia Permanente and are willing to wait a few more
-    years for it.</p>
+    <p>This is a short reference page: we don't offer citizenship as a separately sold service.
+    Here are the key facts for anyone who plans to go on from residency to a passport.</p>
 
-    <h2>When it becomes possible</h2>
-    <p>Naturalization is only possible 3 years after getting
-    <a href="{l['terminologiya']}#residencia-permanente">Residencia Permanente</a> (Art. 148 of
-    Paraguay's Constitution) — meaning the realistic full timeline from moving to holding a
-    passport works out to 7–8 years, not "a year" as some agencies promise.</p>
+    <h2>When you can apply</h2>
+    <p>In our experience, you can apply for naturalization after 3–5 years if you hold a Paraguayan
+    <a href="{l['terminologiya']}#cedula">Cédula</a> (legal basis: Art. 148 of Paraguay's
+    Constitution). "Citizenship in a year," as some agencies promise, doesn't exist.</p>
 
-    <h2>The path from moving to a passport</h2>
-    <div class="diagram">
-      {_CITIZENSHIP_SVG['en']}
-      <p class="diagram-caption">A timeline built from already-published ranges: Temporal (up to
-      2 years) → Permanente (usually 2–5 years) → a mandatory 3-year wait before applying for
-      naturalization.</p>
-    </div>
+    <h2>An exam in Spanish</h2>
+    <p>When applying for citizenship you have to pass an exam on the fundamentals of the state — in
+    Spanish. This requirement is in force.</p>
 
     <h2>Who handles the case</h2>
     <p>The naturalization case is handled by the Supreme Court
     (<a href="{l['terminologiya']}#corte-suprema">Corte Suprema de Justicia</a>), not the
-    migration service; the procedure requires appearing in person and legal representation — it's
-    a separate process with its own timeline, not an automatic continuation of the residency
-    case.</p>
+    migration service; the procedure requires appearing in person and legal representation.</p>
+
+    <h2>Cost</h2>
+    <p>Government fee: ₲43,051 — a state charge (source: Poder Judicial). Full support with a lawyer
+    (lawyer, charges, etc., excluding the government fee) costs roughly from 5,000 USD; the exact
+    amount is confirmed individually.</p>
 
     <h2>Documents</h2>
     <p>The full document list for naturalization is on the
@@ -1376,39 +1283,39 @@ PAGES = {
       <li><a href="{l['keisy']}">"Case Studies"</a> — typical client stories</li>
     </ul>
     ''',
-    final_h2="Planning to go all the way to citizenship?",
-    final_p="We'll estimate the timeline for your specific situation and check your documents before filing with the Supreme Court.",
+    final_h2="Questions about citizenship?",
+    final_p="We'll give you a first orientation on timelines and costs for your situation.",
     final_cta="Request a consultation",
 ),
 "de": dict(
-    title="Paraguayische Staatsbürgerschaft: Fristen, Dokumente, Oberster Gerichtshof | Grund Paraguay",
-    description="Einbürgerung in Paraguay: 3 Jahre nach der Residencia Permanente (Art. 148 der Verfassung), das Verfahren führt der Oberste Gerichtshof, realistische Gesamtfrist vom Umzug bis zum Pass — 7–8 Jahre.",
+    title="Paraguayische Staatsbürgerschaft: Fristen, Prüfung, Kosten | Grund Paraguay",
+    description="Einbürgerung in Paraguay kurz erklärt: Antrag nach 3–5 Jahren mit Cédula, Staatsbürgerschaftskunde-Test auf Spanisch, staatliche Gebühr ₲ 43.051, Begleitung mit Anwalt ab etwa 5000 USD.",
     h1="Paraguayische Staatsbürgerschaft",
     lead="Die paraguayische Staatsbürgerschaft verleiht einen Reisepass mit visumfreiem Zugang zu rund 145 Ländern (Henley Passport Index) und einen stabileren Rechtsstatus als der Aufenthaltstitel.",
     body=lambda l: f'''
-    <p>Die Einbürgerung ist keine Alternative zum Aufenthaltstitel, sondern dessen logische
-    Fortsetzung für alle, die einen stabileren Status als die Residencia Permanente wollen und
-    bereit sind, dafür noch einige Jahre zu warten.</p>
+    <p>Diese Seite ist eine kurze Orientierung: Die Staatsbürgerschaft bieten wir nicht als
+    eigenständige, verkaufte Leistung an. Hier stehen die wichtigsten Eckdaten für alle, die nach
+    dem Aufenthaltstitel bis zum Pass gehen möchten.</p>
 
-    <h2>Wann sie möglich wird</h2>
-    <p>Die Einbürgerung ist erst 3 Jahre nach Erhalt der
-    <a href="{l['terminologiya']}#residencia-permanente">Residencia Permanente</a> möglich (Art.
-    148 der paraguayischen Verfassung) — das heißt, die realistische Gesamtfrist vom Umzug bis zum
-    Pass beträgt 7–8 Jahre, nicht „ein Jahr", wie manchmal auf dem Markt versprochen wird.</p>
+    <h2>Wann der Antrag möglich ist</h2>
+    <p>Nach unserer Erfahrung kann man die Einbürgerung nach 3–5 Jahren beantragen, wenn man eine
+    paraguayische <a href="{l['terminologiya']}#cedula">Cédula</a> besitzt (Rechtsgrundlage:
+    Art. 148 der paraguayischen Verfassung). Eine Staatsbürgerschaft „in einem Jahr", wie sie
+    manchmal auf dem Markt versprochen wird, gibt es nicht.</p>
 
-    <h2>Der Weg vom Umzug zum Pass</h2>
-    <div class="diagram">
-      {_CITIZENSHIP_SVG['de']}
-      <p class="diagram-caption">Eine Zeitachse aus bereits veröffentlichten Spannen: Temporal
-      (bis zu 2 Jahre) → Permanente (meist 2–5 Jahre) → verpflichtende Wartezeit von 3 Jahren vor
-      dem Einbürgerungsantrag.</p>
-    </div>
+    <h2>Prüfung auf Spanisch</h2>
+    <p>Für die Einbürgerung muss man einen Staatsbürgerschaftskunde-Test (eine Prüfung über die
+    Grundlagen des Staates) ablegen — auf Spanisch. Dieses Erfordernis gilt.</p>
 
     <h2>Wer das Verfahren führt</h2>
     <p>Das Einbürgerungsverfahren führt nicht die Migrationsbehörde, sondern der Oberste
     Gerichtshof (<a href="{l['terminologiya']}#corte-suprema">Corte Suprema de Justicia</a>); das
-    Verfahren erfordert persönliches Erscheinen und anwaltliche Begleitung — ein eigenständiger
-    Prozess mit eigenen Fristen, keine automatische Fortsetzung des Aufenthaltsverfahrens.</p>
+    Verfahren erfordert persönliches Erscheinen und anwaltliche Begleitung.</p>
+
+    <h2>Kosten</h2>
+    <p>Staatliche Gebühr: ₲ 43.051 (Quelle: Poder Judicial). Die vollständige Begleitung mit Anwalt
+    (Anwalt, Gebühren usw., ohne die staatliche Gebühr) kostet nach Erfahrung ab etwa 5000 USD;
+    der genaue Betrag wird individuell geklärt.</p>
 
     <h2>Dokumente</h2>
     <p>Die vollständige Dokumentenliste für die Einbürgerung steht auf der Seite
@@ -1423,8 +1330,8 @@ PAGES = {
       <li><a href="{l['keisy']}">„Fallstudien"</a> — typische Mandantengeschichten</li>
     </ul>
     ''',
-    final_h2="Planen Sie, bis zur Staatsbürgerschaft zu gehen?",
-    final_p="Wir schätzen die Fristen speziell für Ihre Situation ein und prüfen Ihre Dokumente vor der Einreichung beim Obersten Gerichtshof.",
+    final_h2="Fragen zur Staatsbürgerschaft?",
+    final_p="Wir geben Ihnen eine erste Orientierung zu Fristen und Kosten in Ihrer Situation.",
     final_cta="Beratung anfragen",
 ),
 },
@@ -1433,12 +1340,12 @@ PAGES = {
     title="Проверка и покупка недвижимости в Парагвае: due diligence | Grund Paraguay",
     description="Due diligence по конкретному объекту недвижимости в Парагвае: цепочка документов, риск lote agrario, escribano, удалённая доверенность и ежегодный Impuesto Inmobiliario.",
     h1="Проверка и покупка недвижимости",
-    lead='Проверка и покупка недвижимости — услуга due diligence по конкретному объекту, которая защищает от переплаты и от скрытых рисков сделки. Мы не ведём каталог объектов — вместо этого проверяем конкретную сделку.',
+    lead='Проверка и покупка недвижимости — услуга due diligence по конкретному объекту, которая защищает от переплаты и от скрытых рисков сделки. Мы не ведём каталог объектов: конкретную сделку проверяет наш партнёр на месте, а мы координируем процесс.',
     body=lambda l: f'''
     <p>Итог услуги — не список «хороших предложений», а отчёт по конкретному объекту: можно ли
     его безопасно покупать и на что обратить внимание до подписания.</p>
 
-    <h2>Что мы проверяем</h2>
+    <h2>Что проверяет партнёр</h2>
     <ul>
       <li><strong>Цепочку правоустанавливающих документов</strong> — кто и на каком основании
       владел объектом до продавца.</li>
@@ -1451,6 +1358,11 @@ PAGES = {
       <li><strong>Удалённую доверенность</strong> — для тех, кто ещё не переехал и не может
       присутствовать на сделке лично.</li>
     </ul>
+
+    <h2>География</h2>
+    <p>На месте мы работаем в Encarnación и департаменте Itapúa. По объектам в других регионах
+    Парагвая проверка возможна только через удалённые контакты — об этом говорим до начала
+    работы.</p>
 
     <h2>Расход, о котором часто забывают: ежегодный налог на владение</h2>
     <div class="callout"><span class="callout-label">Impuesto Inmobiliario</span>Ежегодный налог
@@ -1480,19 +1392,19 @@ PAGES = {
     </ul>
     ''',
     final_h2="Рассматриваете конкретный объект?",
-    final_p="Проверим цепочку документов, статус земли и структуру сделки до того, как вы что-то подпишете.",
+    final_p="Партнёр на месте проверит цепочку документов, статус земли и структуру сделки, а мы скоординируем процесс — до того, как вы что-то подпишете.",
     final_cta="Оставить заявку на консультацию",
 ),
 "es": dict(
     title="Verificación y compra de inmuebles en Paraguay: due diligence | Grund Paraguay",
     description="Due diligence sobre un inmueble concreto en Paraguay: cadena de títulos, riesgo de lote agrario, escribano, poder a distancia e Impuesto Inmobiliario anual.",
     h1="Verificación y compra de inmuebles",
-    lead='La verificación y compra de inmuebles es un servicio de due diligence sobre una propiedad concreta, que protege de sobrepagar o de riesgos ocultos en la operación. No manejamos un catálogo de propiedades — en cambio, verificamos la operación concreta.',
+    lead='La verificación y compra de inmuebles es un servicio de due diligence sobre una propiedad concreta, que protege de sobrepagar o de riesgos ocultos en la operación. No manejamos un catálogo de propiedades: la operación concreta la verifica nuestro socio en el lugar, y nosotros coordinamos el proceso.',
     body=lambda l: f'''
     <p>El resultado del servicio no es una lista de «buenas ofertas», sino un informe sobre un
     inmueble concreto: si se puede comprar con seguridad y qué revisar antes de firmar.</p>
 
-    <h2>Qué verificamos</h2>
+    <h2>Qué verifica el socio</h2>
     <ul>
       <li><strong>La cadena de títulos de propiedad</strong> — quién fue propietario y con qué
       base, antes del vendedor.</li>
@@ -1506,6 +1418,11 @@ PAGES = {
       <li><strong>El poder a distancia</strong> — para quienes aún no se han mudado y no pueden
       estar presentes en la operación.</li>
     </ul>
+
+    <h2>Región</h2>
+    <p>En el lugar trabajamos en Encarnación y en el departamento de Itapúa. Para inmuebles en
+    otras regiones de Paraguay, la verificación solo es posible a través de contactos remotos — lo
+    decimos antes de empezar.</p>
 
     <h2>Un gasto que suele olvidarse: el impuesto anual por tener la propiedad</h2>
     <div class="callout"><span class="callout-label">Impuesto Inmobiliario</span>Impuesto anual
@@ -1535,19 +1452,19 @@ PAGES = {
     </ul>
     ''',
     final_h2="¿Está evaluando un inmueble concreto?",
-    final_p="Verificamos la cadena de títulos, el estatus de la tierra y la estructura de la operación antes de que firme nada.",
+    final_p="Nuestro socio en el lugar verifica la cadena de títulos, el estatus de la tierra y la estructura de la operación, y nosotros coordinamos — antes de que firme nada.",
     final_cta="Solicitar una consulta",
 ),
 "en": dict(
     title="Real Estate Verification & Purchase in Paraguay: Due Diligence | Grund Paraguay",
     description="Due diligence on a specific property in Paraguay: chain of title, lote agrario risk, escribano, remote power of attorney, and the annual Impuesto Inmobiliario.",
     h1="Real Estate Verification & Purchase",
-    lead="Real estate verification & purchase is a due-diligence service on a specific property, protecting you from overpaying or from hidden risks in the deal. We don't run a listings catalog — instead we verify the specific deal.",
+    lead="Real estate verification & purchase is a due-diligence service on a specific property, protecting you from overpaying or from hidden risks in the deal. We don't run a listings catalog: the specific deal is checked by our partner on the ground, and we coordinate the process.",
     body=lambda l: f'''
     <p>The outcome isn't a list of "good deals" — it's a report on one specific property: whether
     it's safe to buy and what to check before you sign.</p>
 
-    <h2>What we check</h2>
+    <h2>What the partner checks</h2>
     <ul>
       <li><strong>The chain of title documents</strong> — who owned the property and on what
       basis, before the seller.</li>
@@ -1561,6 +1478,11 @@ PAGES = {
       <li><strong>A remote power of attorney</strong> — for those who haven't moved yet and can't
       attend the closing in person.</li>
     </ul>
+
+    <h2>Region</h2>
+    <p>On the ground we work in Encarnación and the Itapúa department. For properties in other
+    regions of Paraguay, verification is only possible through remote contacts — we say so before
+    work begins.</p>
 
     <h2>A cost that's easy to overlook: the annual ownership tax</h2>
     <div class="callout"><span class="callout-label">Impuesto Inmobiliario</span>An annual
@@ -1590,19 +1512,19 @@ PAGES = {
     </ul>
     ''',
     final_h2="Considering a specific property?",
-    final_p="We'll check the chain of title, the land's status, and the deal structure before you sign anything.",
+    final_p="Our partner on the ground checks the chain of title, the land's status, and the deal structure, and we coordinate — before you sign anything.",
     final_cta="Request a consultation",
 ),
 "de": dict(
     title="Prüfung und Kauf von Immobilien in Paraguay: Due Diligence | Grund Paraguay",
     description="Due Diligence für ein konkretes Objekt in Paraguay: Eigentumskette, Risiko lote agrario, escribano, Fernvollmacht und die jährliche Impuesto Inmobiliario.",
     h1="Prüfung und Kauf von Immobilien",
-    lead="Prüfung und Kauf von Immobilien ist eine Due-Diligence-Leistung für ein konkretes Objekt, die vor Überzahlung und vor verdeckten Risiken des Geschäfts schützt. Wir führen keinen Objektkatalog — stattdessen prüfen wir das konkrete Geschäft.",
+    lead="Prüfung und Kauf von Immobilien ist eine Due-Diligence-Leistung für ein konkretes Objekt, die vor Überzahlung und vor verdeckten Risiken des Geschäfts schützt. Wir führen keinen Objektkatalog: Das konkrete Geschäft prüft unser Partner vor Ort, wir koordinieren den Ablauf.",
     body=lambda l: f'''
     <p>Das Ergebnis ist keine Liste „guter Angebote", sondern ein Bericht zu einem konkreten
     Objekt: ob es sich sicher kaufen lässt und worauf vor der Unterschrift zu achten ist.</p>
 
-    <h2>Was wir prüfen</h2>
+    <h2>Was der Partner prüft</h2>
     <ul>
       <li><strong>Die Kette der Eigentumsdokumente</strong> — wer das Objekt vor dem Verkäufer
       besaß und auf welcher Grundlage.</li>
@@ -1616,6 +1538,11 @@ PAGES = {
       <li><strong>Die Fernvollmacht</strong> — für alle, die noch nicht umgezogen sind und beim
       Abschluss nicht persönlich anwesend sein können.</li>
     </ul>
+
+    <h2>Region</h2>
+    <p>Vor Ort arbeiten wir in Encarnación und im Departamento Itapúa. Für Objekte in anderen
+    Regionen Paraguays ist die Prüfung nur über Fernkontakte möglich — das sagen wir vor Beginn
+    der Arbeit offen.</p>
 
     <h2>Ein leicht übersehener Posten: die jährliche Eigentumssteuer</h2>
     <div class="callout"><span class="callout-label">Impuesto Inmobiliario</span>Eine jährliche
@@ -1646,7 +1573,7 @@ PAGES = {
     </ul>
     ''',
     final_h2="Haben Sie ein konkretes Objekt im Blick?",
-    final_p="Wir prüfen die Eigentumskette, den Status des Grundstücks und die Struktur des Geschäfts, bevor Sie etwas unterschreiben.",
+    final_p="Unser Partner vor Ort prüft die Eigentumskette, den Status des Grundstücks und die Struktur des Geschäfts, wir koordinieren — bevor Sie etwas unterschreiben.",
     final_cta="Beratung anfragen",
 ),
 },
@@ -1657,8 +1584,9 @@ PAGES = {
     h1="Открытие компании (EAS/SRL)",
     lead='Открытие компании — регистрация юридического лица в Парагвае, которое даёт возможность вести бизнес легально: выставлять счета, нанимать сотрудников и открывать банковский счёт на компанию.',
     body=lambda l: f'''
-    <p>Мы предлагаем открытие компании в комплекте с резидентурой, а не как отдельный премиум-
-    продукт: для большинства клиентов это шаги одного проекта, а не два независимых заказа.</p>
+    <p>Регистрацию компании мы передаём проверенному партнёру на месте и координируем процесс.
+    Регистрация проходит только при личном присутствии — онлайн-оформления «пакетом с
+    резидентурой» нет.</p>
 
     <h2>Три формы, три срока регистрации</h2>
     <div class="diagram">
@@ -1676,7 +1604,7 @@ PAGES = {
     представителю.</p>
 
     <h2>Стоимость</h2>
-    <p>Расходы на регистрацию и полная стоимость услуги в комплекте с резидентурой — на странице
+    <p>Расходы на регистрацию и стоимость услуги — на странице
     <a href="{l['stoimost']}">«Стоимость и тарифы»</a>.</p>
 
     <h2>После регистрации: RUC и отчётность</h2>
@@ -1686,7 +1614,7 @@ PAGES = {
 
     <h2>Смотрите также</h2>
     <ul>
-      <li><a href="{l['usluga-residencia']}">«Резидентура (ВНЖ)»</a> — обычно идёт в комплекте с
+      <li><a href="{l['usluga-residencia']}">«Резидентура (ВНЖ)»</a> — часто нужна параллельно с
       открытием компании</li>
       <li><a href="{l['usluga-compliance']}">«Сопровождение и комплаенс»</a> — что нужно после
       регистрации</li>
@@ -1704,9 +1632,9 @@ PAGES = {
     h1="Apertura de empresa (EAS/SRL)",
     lead='La apertura de empresa es la inscripción de una persona jurídica en Paraguay, que permite operar legalmente: facturar, contratar personal y abrir una cuenta bancaria a nombre de la empresa.',
     body=lambda l: f'''
-    <p>Ofrecemos la apertura de empresa junto con la residencia, no como un producto premium
-    aparte: para la mayoría de los clientes son pasos de un mismo proyecto, no dos encargos
-    independientes.</p>
+    <p>La inscripción de la empresa la derivamos a un socio verificado en el lugar y coordinamos el
+    proceso. La inscripción se hace solo de forma presencial — no ofrecemos un trámite en línea
+    «en paquete con la residencia».</p>
 
     <h2>Tres formas, tres plazos de registro</h2>
     <div class="diagram">
@@ -1724,7 +1652,7 @@ PAGES = {
     para el representante.</p>
 
     <h2>Costo</h2>
-    <p>Los gastos de registro y el costo completo del servicio junto con la residencia están en la
+    <p>Los gastos de registro y el costo del servicio están en la
     página <a href="{l['stoimost']}">«Costos y tarifas»</a>.</p>
 
     <h2>Después del registro: RUC y declaraciones</h2>
@@ -1734,8 +1662,8 @@ PAGES = {
 
     <h2>Vea también</h2>
     <ul>
-      <li><a href="{l['usluga-residencia']}">«Residencia»</a> — normalmente va junto con la
-      apertura de la empresa</li>
+      <li><a href="{l['usluga-residencia']}">«Residencia»</a> — a menudo se tramita en paralelo
+      con la apertura de la empresa</li>
       <li><a href="{l['usluga-compliance']}">«Acompañamiento y cumplimiento»</a> — qué se necesita
       después del registro</li>
       <li><a href="{l['usluga-relocation']}">«Relocalización de empresas»</a> — si no se muda un
@@ -1752,8 +1680,9 @@ PAGES = {
     h1="Company Formation (EAS/SRL)",
     lead="Company formation is registering a legal entity in Paraguay, which lets you do business legally: issue invoices, hire staff, and open a bank account in the company's name.",
     body=lambda l: f'''
-    <p>We offer company formation bundled with residency, not as a separate premium product — for
-    most clients these are steps in one project, not two independent orders.</p>
+    <p>We hand company registration over to a vetted partner on the ground and coordinate the
+    process. Registration is done in person only — we don't offer an online registration
+    "bundled with residency."</p>
 
     <h2>Three forms, three registration timelines</h2>
     <div class="diagram">
@@ -1771,7 +1700,7 @@ PAGES = {
     requirement for the representative.</p>
 
     <h2>Cost</h2>
-    <p>Registration costs and the full price of the service bundled with residency are on the
+    <p>Registration costs and the price of the service are on the
     <a href="{l['stoimost']}">"Pricing"</a> page.</p>
 
     <h2>After registration: RUC and filings</h2>
@@ -1781,8 +1710,8 @@ PAGES = {
 
     <h2>See also</h2>
     <ul>
-      <li><a href="{l['usluga-residencia']}">"Residency"</a> — usually bundled with company
-      formation</li>
+      <li><a href="{l['usluga-residencia']}">"Residency"</a> — often handled in parallel with
+      company formation</li>
       <li><a href="{l['usluga-compliance']}">"Ongoing Compliance"</a> — what's needed after
       registration</li>
       <li><a href="{l['usluga-relocation']}">"Business Relocation"</a> — for when it's a whole
@@ -1799,9 +1728,9 @@ PAGES = {
     h1="Unternehmensgründung (EAS/SRL)",
     lead="Die Unternehmensgründung ist die Eintragung einer juristischen Person in Paraguay, die es ermöglicht, legal Geschäfte zu tätigen: Rechnungen zu stellen, Personal einzustellen und ein Firmenkonto zu eröffnen.",
     body=lambda l: f'''
-    <p>Wir bieten die Unternehmensgründung im Paket mit dem Aufenthaltstitel an, nicht als
-    separates Premiumprodukt — für die meisten Mandanten sind das Schritte eines Projekts, keine
-    zwei unabhängigen Aufträge.</p>
+    <p>Die Registrierung des Unternehmens übergeben wir an einen geprüften Partner vor Ort und
+    koordinieren den Ablauf. Die Registrierung erfolgt nur mit persönlicher Anwesenheit — eine
+    Online-Abwicklung „im Paket mit dem Aufenthaltstitel" bieten wir nicht an.</p>
 
     <h2>Drei Formen, drei Registrierungsfristen</h2>
     <div class="diagram">
@@ -1819,8 +1748,7 @@ PAGES = {
     Anforderung an den Vertreter.</p>
 
     <h2>Kosten</h2>
-    <p>Die Registrierungskosten und der vollständige Preis der Leistung im Paket mit dem
-    Aufenthaltstitel stehen auf der Seite <a href="{l['stoimost']}">„Preise"</a>.</p>
+    <p>Die Registrierungskosten und der Preis der Leistung stehen auf der Seite <a href="{l['stoimost']}">„Preise"</a>.</p>
 
     <h2>Nach der Registrierung: RUC und Meldungen</h2>
     <p>Für ein registriertes Unternehmen gilt dieselbe Logik wie für eine Privatperson nach Erhalt
@@ -1830,7 +1758,7 @@ PAGES = {
 
     <h2>Siehe auch</h2>
     <ul>
-      <li><a href="{l['usluga-residencia']}">„Aufenthaltstitel"</a> — meist im Paket mit der
+      <li><a href="{l['usluga-residencia']}">„Aufenthaltstitel"</a> — oft parallel zur
       Unternehmensgründung</li>
       <li><a href="{l['usluga-compliance']}">„Begleitung und Compliance"</a> — was nach der
       Registrierung nötig ist</li>

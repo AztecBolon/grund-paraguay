@@ -231,6 +231,13 @@ SLUGS = {
     "rabota-v-paragvae":   {"ru": "rabota-v-paragvae.html", "es": "trabajo-en-paraguay.html",
                              "en": "working-in-paraguay.html", "de": "arbeiten-in-paraguay.html"},
 
+    # --- «Карта Парагвая» — новая подстраница хаба «Парагвай для переезда» (15.10.2026, правки
+    # партнёра на месте, октябрь 2026; design/promt-vnedrenie-izmeneniy-sayt-okt2026.md, раздел
+    # «Новый раздел — Karte von Paraguay»). Содержательная страница со схемой — не то же самое,
+    # что связка с map.grundparaguay.com в map_link.py (там MAP_LIVE = False).
+    "karta-paragvaya":     {"ru": "karta-paragvaya.html", "es": "mapa-de-paraguay.html",
+                             "en": "map-of-paraguay.html", "de": "karte-von-paraguay.html"},
+
     # --- «Релокация организаций» — восьмая услуга (21.08.2026, старт RU-only; 21.08.2026 —
     # переведена на ES/EN/DE по запросу заказчика «Делай релокацию и достопримечательности
     # мультиязычными»). Источник фактуры — design/relokatsiya-organizatsiy-issledovanie.md
@@ -345,10 +352,10 @@ CONTACT_LEGAL_NAME = "Fortuna Vida E.A.S."
 CONTACT_ADDRESS = "ETAPA 9009 San Isidro, 6000 Encarnación, Paraguay"
 
 FOOTER_DISCLAIMER = {
-    "ru": 'Сопровождаем переезд, резидентуру и бизнес в Парагвае по договору с фиксированной ценой. Мы не обещаем гражданство «за год» — честный срок и то, откуда он берётся, — на странице <a href="{protsess}">«Процесс и сроки»</a>.',
-    "es": 'Acompañamos la mudanza, la residencia y los negocios en Paraguay con un contrato de precio fijo. No prometemos la ciudadanía «en un año» — el plazo real y de dónde sale, en la página <a href="{protsess}">«Proceso y plazos»</a>.',
-    "en": 'We support relocation, residency and business in Paraguay under a fixed-price contract. We don\'t promise citizenship "in a year" — the honest timeline, and where it comes from, is on the <a href="{protsess}">"Process & Timeline"</a> page.',
-    "de": 'Wir begleiten den Umzug, die Aufenthaltsgenehmigung und das Geschäft in Paraguay auf Basis eines Vertrags mit Festpreis. Wir versprechen keine Staatsbürgerschaft „in einem Jahr" — die ehrliche Frist und woher sie stammt, steht auf der Seite <a href="{protsess}">„Prozess und Fristen"</a>.',
+    "ru": 'Сопровождаем переезд, резидентуру и бизнес в Парагвае по письменной договорённости с фиксированной ценой. Мы не обещаем гражданство «за год» — срок по нашему опыту и то, откуда он берётся, — на странице <a href="{protsess}">«Процесс и сроки»</a>.',
+    "es": 'Acompañamos la mudanza, la residencia y los negocios en Paraguay con un acuerdo por escrito de precio fijo. No prometemos la ciudadanía «en un año» — el plazo según nuestra experiencia y de dónde sale, en la página <a href="{protsess}">«Proceso y plazos»</a>.',
+    "en": 'We support relocation, residency and business in Paraguay under a written fixed-price agreement. We don\'t promise citizenship "in a year" — the timeline from our experience, and where it comes from, is on the <a href="{protsess}">"Process & Timeline"</a> page.',
+    "de": 'Wir begleiten den Umzug, die Aufenthaltsgenehmigung und das Geschäft in Paraguay auf Basis einer schriftlichen Vereinbarung mit Festpreis. Wir versprechen keine Staatsbürgerschaft „in einem Jahr" — die Frist nach unserer Erfahrung und woher sie stammt, steht auf der Seite <a href="{protsess}">„Prozess und Fristen"</a>.',
 }
 FOOTER_SECTIONS_LABEL = {"ru": "Разделы", "es": "Secciones", "en": "Sections", "de": "Bereiche"}
 FOOTER_DOCS_LABEL = {"ru": "Документы", "es": "Documentos", "en": "Documents", "de": "Dokumente"}

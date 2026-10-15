@@ -28,7 +28,7 @@ def L(lang):
            "paragvay-hub", "pochemu-paragvay", "zhizn-v-paragvae", "stoimost-zhizni",
            "nalogi-inostrantsev", "banki-perevody", "viza-vyezd", "mify-voprosy",
            "dokumenty", "dok-temporal", "turizm", "meditsina-v-paragvae", "usluga-medicina",
-           "usluga-compliance", "rabota-v-paragvae"]
+           "usluga-compliance", "rabota-v-paragvae", "karta-paragvaya", "attr-filadelfia"]
     return {pid: href_to(pid, lang) for pid in ids}
 
 
@@ -321,6 +321,15 @@ def build_hub_landing():
       <a class="card-link" href="{l['rabota-v-paragvae']}">{MORE[lang]}</a>
     </article>'''
 
+        # «Карта Парагвая» — подстраница хаба (15.10.2026), карточка тем же приёмом.
+        karta_title, karta_desc = KARTA_CARD[lang]
+        blocks_html += f'''
+    <article class="card" style="margin-bottom:24px;">
+      <h3>{karta_title}</h3>
+      <p style="font-size:16px;">{karta_desc}</p>
+      <a class="card-link" href="{l['karta-paragvaya']}">{MORE[lang]}</a>
+    </article>'''
+
         body = f'''
 {crumbs(lang, HUB_LABEL[lang])}
 {hero(t["h1"], t["lead"], compact=True)}
@@ -467,6 +476,11 @@ def build_pochemu():
     здесь меньше посредников, конкурирующих за клиента, и меньше уже устоявшихся,
     закостеневших практик.</p>
 
+    <p>Есть и то, о чём говорит сам рост числа иммигрантов в последние годы: резиденцию здесь
+    получить сравнительно легко, в стране безопасно и свободно, хорошая инфраструктура, а
+    максимальная ставка налога — 10%. Коротко: жить в безопасности и свободе в сердце Южной
+    Америки, не платя больших налогов.</p>
+
     <p>У этой доступности есть цена — время. Реалистичный срок «от приезда до паспорта» —
     7–8 лет, а не один год, как иногда обещают недобросовестные агентства; это прямая оценка
     директора миграционной службы Парагвая (DNM), Хорхе Кронаветтера (ABC Color, 04.05.2026) —
@@ -534,6 +548,11 @@ def build_pochemu():
     puede leerse no como señal de subdesarrollo, sino como que aquí hay menos intermediarios
     compitiendo por el cliente y menos prácticas ya asentadas y rígidas.</p>
 
+    <p>Además, el crecimiento del número de inmigrantes en los últimos años habla por sí solo: la
+    residencia se obtiene con relativa facilidad, el país es seguro y libre, la infraestructura es
+    buena y la tasa impositiva máxima es del 10%. En pocas palabras: vivir con seguridad y libertad
+    en el corazón de Sudamérica, sin pagar grandes impuestos.</p>
+
     <p>Esta accesibilidad tiene un precio — el tiempo. El plazo realista «desde la llegada hasta el
     pasaporte» es de 7 a 8 años, no un año, como a veces prometen agencias poco serias; es la
     estimación directa del director del servicio de migraciones de Paraguay (DNM), Jorge Kronawetter
@@ -597,6 +616,11 @@ def build_pochemu():
     the major regional deal trackers don't even include Paraguay in their coverage. That can be read
     not as a sign of underdevelopment, but as meaning fewer intermediaries competing for clients and
     fewer already-entrenched, rigid practices.</p>
+
+    <p>On top of that, the growth in the number of immigrants in recent years speaks for itself:
+    residency is relatively easy to obtain, the country is safe and free, the infrastructure is
+    good, and the top tax rate is 10%. In short: living in safety and freedom in the heart of South
+    America without paying high taxes.</p>
 
     <p>This accessibility comes at a cost — time. The realistic timeline "from arrival to passport" is 7
     to 8 years, not one year, as some unscrupulous agencies sometimes promise; that's the direct
@@ -665,6 +689,11 @@ def build_pochemu():
     Deal-Tracker Paraguay überhaupt nicht in ihrer Abdeckung. Das lässt sich nicht als Zeichen von
     Unterentwicklung lesen, sondern als Hinweis darauf, dass es hier weniger Vermittler gibt, die um
     Kunden konkurrieren, und weniger bereits erstarrte, festgefahrene Praktiken.</p>
+
+    <p>Hinzu kommt etwas, das der Anstieg der Einwandererzahlen der letzten Jahre selbst zeigt: Der
+    Aufenthaltstitel ist vergleichsweise leicht zu erhalten, das Land ist sicher und frei, die
+    Infrastruktur ist gut, und der Höchststeuersatz liegt bei 10%. Kurz gesagt: in Sicherheit und
+    Freiheit im Herzen Südamerikas leben, ohne hohe Steuern zu zahlen.</p>
 
     <p>Diese Zugänglichkeit hat einen Preis — Zeit. Die realistische Frist „von der Ankunft bis zum Pass"
     beträgt 7 bis 8 Jahre, nicht ein Jahr, wie es unseriöse Agenturen mitunter versprechen; das ist
@@ -1164,21 +1193,16 @@ BANKI_PROSE = {
     отмыванию денег) — это прямо опровергает возможные опасения о повышенных банковских
     рисках именно из-за статуса страны.</p>
 
-    <p>Что касается открытия счёта — по примеру одного из банков (Itaú Paraguay, через данные
-    финтех-сервиса Wise, не первоисточник банка) для валютного счёта на момент проверки
-    упоминался минимальный средний остаток около 6000 USD для расчётного счёта и 2500 USD для
-    сберегательного. Это стоит воспринимать именно как пример условий одного банка, а не как
-    общее правило для всех — у разных банков Парагвая требования отличаются, и точный список
-    нужно уточнять непосредственно перед открытием счёта.</p>
+    <p>Условия открытия счёта (минимальный остаток, список документов) у разных банков Парагвая
+    отличаются и со временем меняются, поэтому точный список уточняется непосредственно перед
+    открытием счёта. Мы можем предложить вам открытие счёта в одном из банков «большой пятёрки»
+    Парагвая.</p>
 
-    <p>Отдельный практический контекст — санкционные ограничения на переводы из России. SWIFT
-    официально отключил Сбербанк ещё 3 июня 2022 года. Дальше ограничения расширялись: 19-й
-    пакет санкций ЕС (23.10.2025) добавил под транзакционный запрет ещё пять российских
-    банков, включая Альфа-Банк и МТС Банк, а с 25 января 2026 года ограничения распространились
-    также на систему СБП и платёжную систему «Мир»; 20-й пакет санкций ЕС (23.04.2026) ввёл
-    полный запрет на рублёвый стейблкоин и на поддержку разработки цифрового рубля Центробанка
-    России, добавив ещё двадцать российских банков под ограничения. Перевод денег из России в
-    Парагвай — тема, которая требует индивидуального разбора конкретной ситуации на
+    <p>Отдельный практический контекст — санкционные ограничения на переводы из России. С 2022
+    года они последовательно расширяются: отключение российских банков от SWIFT,
+    транзакционные запреты ЕС для всё большего числа российских банков, ограничения для СБП,
+    платёжной системы «Мир» и рублёвого стейблкоина — и продолжают меняться. Перевод денег из
+    России в Парагвай — тема, которая требует индивидуального разбора конкретной ситуации на
     консультации, а не общей инструкции, применимой ко всем.</p>''',
     "es": '''
     <p>Las restricciones bancarias vinculadas a las sanciones siguen cambiando a lo largo de todo 2026 —
@@ -1200,24 +1224,17 @@ BANKI_PROSE = {
     directamente posibles temores sobre un riesgo bancario elevado precisamente por el estatus del
     país.</p>
 
-    <p>En cuanto a abrir una cuenta — según el ejemplo de un banco (Itaú Paraguay, a través de datos del
-    servicio fintech Wise, no la fuente primaria del banco), para una cuenta en moneda extranjera se
-    mencionaba, al momento de la revisión, un saldo medio mínimo de unos 6.000 USD para la cuenta
-    corriente y 2.500 USD para la cuenta de ahorro. Esto hay que tomarlo justamente como ejemplo de
-    las condiciones de un banco, no como una regla general para todos — los distintos bancos de
-    Paraguay tienen requisitos diferentes, y la lista exacta debe confirmarse justo antes de abrir la
-    cuenta.</p>
+    <p>Las condiciones para abrir una cuenta (saldo mínimo, lista de documentos) varían entre los
+    bancos de Paraguay y cambian con el tiempo, por eso la lista exacta se confirma justo antes de
+    abrir la cuenta. Podemos ofrecerle la apertura de una cuenta en uno de los «cinco grandes»
+    bancos de Paraguay.</p>
 
     <p>Otro contexto práctico aparte son las restricciones por sanciones a las transferencias desde
-    Rusia. SWIFT desconectó oficialmente a Sberbank ya el 3 de junio de 2022. Después las
-    restricciones se ampliaron: el 19.º paquete de sanciones de la UE (23.10.2025) sumó a otros cinco
-    bancos rusos a la prohibición transaccional, incluidos Alfa-Bank y MTS Bank, y desde el 25 de
-    enero de 2026 las restricciones se extendieron también al sistema SBP y al sistema de pagos
-    «Mir»; el 20.º paquete de sanciones de la UE (23.04.2026) impuso una prohibición total a la
-    stablecoin en rublos y al apoyo al desarrollo del rublo digital del Banco Central de Rusia,
-    sumando otros veinte bancos rusos a las restricciones. Transferir dinero desde Rusia a Paraguay es
-    un tema que requiere un análisis individual de la situación concreta en la consulta, no una
-    instrucción general aplicable a todos.</p>''',
+    Rusia. Desde 2022 se han ido ampliando: la desconexión de bancos rusos de SWIFT, prohibiciones
+    transaccionales de la UE para cada vez más bancos rusos, restricciones al sistema SBP, al
+    sistema de pagos «Mir» y a la stablecoin en rublos — y siguen cambiando. Transferir dinero desde
+    Rusia a Paraguay es un tema que requiere un análisis individual de la situación concreta en la
+    consulta, no una instrucción general aplicable a todos.</p>''',
     "en": '''
     <p>Sanctions-related banking restrictions keep changing throughout 2026 — when planning, it's worth
     checking the current status separately.</p>
@@ -1236,22 +1253,16 @@ BANKI_PROSE = {
     FATF (the international anti-money-laundering group) "grey list" — this directly refutes any
     concerns about elevated banking risk specifically because of the country's status.</p>
 
-    <p>As for opening an account — going by one bank's example (Itaú Paraguay, via data from the fintech
-    service Wise, not the bank's own primary source), at the time of checking, a foreign-currency
-    account required a minimum average balance of around $6,000 for a checking account and $2,500 for
-    a savings account. Treat this specifically as an example of one bank's terms, not a general rule
-    for all — different banks in Paraguay have different requirements, and the exact list needs to be
-    confirmed right before opening an account.</p>
+    <p>The terms for opening an account (minimum balance, list of documents) differ between banks
+    in Paraguay and change over time, so the exact list is confirmed right before opening the
+    account. We can offer you an account with one of Paraguay's "big five" banks.</p>
 
-    <p>A separate practical context is sanctions-related restrictions on transfers from Russia. SWIFT
-    officially disconnected Sberbank back on June 3, 2022. Restrictions have since expanded: the EU's
-    19th sanctions package (10/23/2025) added five more Russian banks to the transaction ban,
-    including Alfa-Bank and MTS Bank, and from January 25, 2026, restrictions also extended to the
-    SPFS/SBP system and the "Mir" payment system; the EU's 20th sanctions package (04/23/2026)
-    introduced a full ban on the ruble stablecoin and on support for developing the Russian Central
-    Bank's digital ruble, adding another twenty Russian banks to the restrictions. Transferring money
-    from Russia to Paraguay is a topic that calls for an individual review of the specific situation
-    during a consultation, not a general instruction that applies to everyone.</p>''',
+    <p>A separate practical context is sanctions-related restrictions on transfers from Russia.
+    Since 2022 they have been expanding step by step: Russian banks disconnected from SWIFT, EU
+    transaction bans on more and more Russian banks, restrictions on the SBP system, the "Mir"
+    payment system and the ruble stablecoin — and they keep changing. Transferring money from Russia
+    to Paraguay is a topic that calls for an individual review of the specific situation during a
+    consultation, not a general instruction that applies to everyone.</p>''',
     "de": '''
     <p>Sanktionsbedingte Bankbeschränkungen ändern sich das ganze Jahr 2026 über weiter — bei der
     Planung lohnt es sich, den aktuellen Stand gesondert zu prüfen.</p>
@@ -1271,23 +1282,16 @@ BANKI_PROSE = {
     „grauen Liste" der FATF (der internationalen Gruppe gegen Geldwäsche) — das widerlegt direkt
     mögliche Bedenken zu einem erhöhten Bankrisiko allein aufgrund des Status des Landes.</p>
 
-    <p>Was die Kontoeröffnung betrifft — am Beispiel einer Bank (Itaú Paraguay, über Daten des
-    Fintech-Dienstes Wise, nicht die Primärquelle der Bank selbst) wurde zum Zeitpunkt der Prüfung für
-    ein Fremdwährungskonto ein Mindestdurchschnittssaldo von etwa 6.000 USD für ein Girokonto und
-    2.500 USD für ein Sparkonto genannt. Das sollte genau als Beispiel für die Bedingungen einer Bank
-    verstanden werden, nicht als allgemeine Regel für alle — verschiedene Banken in Paraguay haben
-    unterschiedliche Anforderungen, und die genaue Liste muss unmittelbar vor der Kontoeröffnung
-    geklärt werden.</p>
+    <p>Die Bedingungen für die Kontoeröffnung (Mindestsaldo, Unterlagen) unterscheiden sich von
+    Bank zu Bank in Paraguay und ändern sich mit der Zeit — die genaue Liste wird daher unmittelbar
+    vor der Kontoeröffnung geklärt. Wir können Ihnen die Eröffnung eines Kontos bei einer der
+    „großen 5" Banken Paraguays anbieten.</p>
 
-    <p>Ein gesonderter praktischer Kontext sind sanktionsbedingte Beschränkungen bei Überweisungen aus
-    Russland. SWIFT hat die Sberbank bereits am 3. Juni 2022 offiziell abgeklemmt. Danach wurden die
-    Beschränkungen erweitert: Das 19. Sanktionspaket der EU (23.10.2025) nahm fünf weitere russische
-    Banken in das Transaktionsverbot auf, darunter Alfa-Bank und MTS Bank, und seit dem 25. Januar
-    2026 erstrecken sich die Beschränkungen auch auf das System SBP und das Zahlungssystem „Mir"; das
-    20. Sanktionspaket der EU (23.04.2026) führte ein vollständiges Verbot des Rubel-Stablecoins und
-    der Unterstützung der Entwicklung des digitalen Rubels der russischen Zentralbank ein und nahm
-    weitere zwanzig russische Banken in die Beschränkungen auf. Geldtransfers aus Russland nach
-    Paraguay sind ein Thema, das eine individuelle Prüfung der konkreten Situation im
+    <p>Ein gesonderter praktischer Kontext sind sanktionsbedingte Beschränkungen bei Überweisungen
+    aus Russland. Seit 2022 werden sie schrittweise ausgeweitet: Abkopplung russischer Banken von
+    SWIFT, Transaktionsverbote der EU für immer mehr russische Banken, Beschränkungen für SBP, das
+    Zahlungssystem „Mir" und den Rubel-Stablecoin — und sie ändern sich weiter. Geldtransfers aus
+    Russland nach Paraguay sind ein Thema, das eine individuelle Prüfung der konkreten Situation im
     Beratungsgespräch erfordert, keine allgemeine, für alle geltende Anleitung.</p>''',
 }
 
@@ -1340,6 +1344,11 @@ VIZA_PROSE = {
     это не любой переводчик, а специалист с местной регистрацией, и именно такой перевод
     принимают органы.</p>
 
+    <p>Требования к документам — апостиль, перевод и т. д. — одинаковы для всех
+    национальностей. Отдельное исключение есть для граждан России: по документам о разводе
+    вместо полного набора апостилей достаточно фотокопии с доплатой через посольство РФ в
+    Асунсьоне.</p>
+
     <p>По действующему закону в стране три категории пребывания: «спонтанное» (occasional,
     туризм — до 90 дней), временное резидентство и постоянное резидентство. Постоянные
     резиденты, которые получили статус после реформы 2022 года, обязаны продлевать его каждые
@@ -1370,6 +1379,11 @@ VIZA_PROSE = {
     matriculado en Paraguay («Traductor Público matriculado») — no es cualquier traductor, sino un
     profesional con matrícula local, y solo ese tipo de traducción es aceptada por las autoridades.</p>
 
+    <p>Los requisitos para los documentos — apostilla, traducción, etc. — son los mismos para todas
+    las nacionalidades. Hay una excepción aparte para los ciudadanos de Rusia: para los documentos
+    de divorcio, en lugar del juego completo de apostillas basta una fotocopia con un pago adicional
+    a través de la embajada de Rusia en Asunción.</p>
+
     <p>Según la ley vigente, en el país hay tres categorías de estadía: «ocasional» (occasional,
     turismo — hasta 90 días), residencia temporal y residencia permanente. Los residentes permanentes
     que obtuvieron el estatus después de la reforma de 2022 deben renovarlo cada 10 años — no es una
@@ -1397,6 +1411,11 @@ VIZA_PROSE = {
     <p>Apostilled documents not in Spanish must be translated by a sworn translator registered in
     Paraguay ("Traductor Público matriculado") — not just any translator, but a specialist with local
     registration, and it's specifically this kind of translation that authorities accept.</p>
+
+    <p>The document requirements — apostille, translation, and so on — are the same for all
+    nationalities. There is a separate exception for Russian citizens: for divorce documents, instead
+    of the full set of apostilles, a photocopy with an additional fee through the Russian embassy in
+    Asunción is sufficient.</p>
 
     <p>Under current law, the country has three categories of stay: "occasional" (tourism — up to 90
     days), temporary residency, and permanent residency. Permanent residents who obtained their
@@ -1427,6 +1446,11 @@ VIZA_PROSE = {
     registrierten vereidigten Übersetzer («Traductor Público matriculado») übersetzt werden — das ist
     nicht irgendein Übersetzer, sondern ein Fachmann mit lokaler Zulassung, und nur eine solche
     Übersetzung wird von den Behörden akzeptiert.</p>
+
+    <p>Die Anforderungen an die Dokumente — Apostille, Übersetzung usw. — sind für alle
+    Staatsangehörigkeiten gleich. Eine gesonderte Ausnahme gibt es für russische Staatsbürger: Bei
+    Scheidungsdokumenten genügt statt des vollständigen Satzes an Apostillen eine Fotokopie gegen
+    eine Zusatzgebühr über die Botschaft der Russischen Föderation in Asunción.</p>
 
     <p>Nach geltendem Recht gibt es im Land drei Aufenthaltskategorien: „spontan" (occasional, Tourismus —
     bis zu 90 Tage), befristete Residenz und Daueraufenthalt. Daueraufenthaltsberechtigte, die ihren
@@ -1523,11 +1547,12 @@ MYTHS = {
          '<a href="{pochemu}">«Почему Парагвай»</a>.',
          'Конституция Парагвая (ст. 148) требует минимум три года «radicación», отсчитываемых с даты получения постоянной резиденции, а не с момента въезда в страну; реальный общий срок обычно существенно превышает год.'),
         ("Резидентность через депозит 5000 USD",
-         'Эта схема действительно существовала, но была отменена ещё в октябре 2022 года вместе с '
-         'принятием нового миграционного закона (Ley 6984/22). Вместо фиксированного депозита '
-         'сейчас действует система, привязанная к конкретному подтверждению платёжеспособности или '
-         'инвестиционному проекту заявителя, а не к единой универсальной сумме.',
-         'Схема фиксированного депозита была отменена в октябре 2022 года (Ley 6984/22); сейчас действует система, привязанная к подтверждению платёжеспособности или инвестиционному проекту, а не к единой сумме.'),
+         'Сумма в мифе завышена, а сама схема уже не действует. Раньше при подаче на Cédula '
+         'действительно требовалось внести депозит в государственный банк в качестве обеспечения — '
+         'около 4000 USD, а не 5000. Депозит отменили вместе с новым миграционным законом '
+         '(Ley 6984/22): сейчас он не требуется, но вместо него обязательно нужно предоставить '
+         'справку о доходах.',
+         'Раньше при подаче на Cédula требовался депозит в госбанке около 4000 USD (не 5000); сейчас депозит не нужен, но обязательна справка о доходах.'),
         ("Россиянам нужна виза, чтобы подать заявление на резиденцию",
          'Не соответствует действительности в части въезда — между Россией и Парагваем действует '
          'безвизовый режим с 2014 года (подробнее — на странице '
@@ -1556,11 +1581,12 @@ MYTHS = {
          '<a href="{pochemu}">«Por qué Paraguay»</a>.',
          'La Constitución de Paraguay (art. 148) exige un mínimo de tres años de «radicación», contados desde la fecha de obtención de la residencia permanente, no desde el momento de entrar al país; el plazo total real suele superar ampliamente el año.'),
         ("Residencia mediante un depósito de 5.000 USD",
-         'Este esquema efectivamente existió, pero fue eliminado ya en octubre de 2022 junto con la '
-         'nueva ley migratoria (Ley 6984/22). En lugar de un depósito fijo, ahora rige un sistema '
-         'vinculado a una comprobación concreta de solvencia o a un proyecto de inversión del '
-         'solicitante, y no a una suma única universal.',
-         'El esquema de depósito fijo fue eliminado en octubre de 2022 (Ley 6984/22); ahora rige un sistema vinculado a la comprobación de solvencia o a un proyecto de inversión, no a una suma única.'),
+         'La cifra del mito está inflada y el esquema ya no rige. Antes, al solicitar la Cédula, '
+         'efectivamente había que hacer un depósito en un banco estatal como respaldo — unos '
+         '4.000 USD, no 5.000. El depósito se eliminó junto con la nueva ley migratoria (Ley '
+         '6984/22): hoy no se exige, pero en su lugar es obligatorio presentar un comprobante de '
+         'ingresos.',
+         'Antes, al solicitar la Cédula, se exigía un depósito en un banco estatal de unos 4.000 USD (no 5.000); hoy ya no, pero es obligatorio un comprobante de ingresos.'),
         ("Los rusos necesitan visa para presentar la solicitud de residencia",
          'No corresponde a la realidad en cuanto a la entrada — entre Rusia y Paraguay rige un régimen '
          'sin visado desde 2014 (más detalles en la página <a href="{viza}">«Visa y entrada»</a>). Un '
@@ -1588,11 +1614,11 @@ MYTHS = {
          '<a href="{pochemu}">"Why Paraguay"</a> page.',
          'Paraguay\'s Constitution (Art. 148) requires a minimum of three years of "radicación," counted from the date permanent residency is granted, not from entry into the country; the real overall timeline is usually well beyond a year.'),
         ("Residency through a $5,000 deposit",
-         'This scheme really did exist, but it was abolished back in October 2022 along with the new '
-         'migration law (Ley 6984/22). Instead of a fixed deposit, a system now applies that\'s tied to '
-         'specific proof of solvency or to the applicant\'s investment project, rather than to one '
-         'universal amount.',
-         'The fixed-deposit scheme was abolished in October 2022 (Ley 6984/22); a system now applies tied to proof of solvency or an investment project, not a single universal amount.'),
+         'The amount in the myth is inflated, and the scheme no longer applies. Previously, when '
+         'applying for the Cédula, you did have to place a deposit in a state bank as security — '
+         'about $4,000, not $5,000. The deposit was abolished along with the new migration law '
+         '(Ley 6984/22): it\'s no longer required, but instead you must provide proof of income.',
+         'Previously, a Cédula application required a state-bank deposit of about $4,000 (not $5,000); today no deposit is needed, but proof of income is mandatory.'),
         ("Russians need a visa to apply for residency",
          'Not true regarding entry — Russia and Paraguay have had a visa-free regime since 2014 (more '
          'on the <a href="{viza}">"Visa and Entry"</a> page). A separate procedural nuance — whether you '
@@ -1619,11 +1645,12 @@ MYTHS = {
          'Jahr — mehr dazu auf der Seite <a href="{pochemu}">„Warum Paraguay"</a>.',
          'Die Verfassung Paraguays (Art. 148) verlangt mindestens drei Jahre „radicación", gerechnet ab dem Datum des Erhalts der Daueraufenthaltsberechtigung, nicht ab der Einreise; die tatsächliche Gesamtfrist liegt in der Regel deutlich über einem Jahr.'),
         ("Residenz durch eine Einlage von 5.000 USD",
-         'Dieses Modell gab es tatsächlich, wurde aber bereits im Oktober 2022 zusammen mit dem neuen '
-         'Migrationsgesetz (Ley 6984/22) abgeschafft. Anstelle einer festen Einlage gilt jetzt ein '
-         'System, das an einen konkreten Zahlungsfähigkeitsnachweis oder ein Investitionsprojekt des '
-         'Antragstellers gebunden ist, nicht an einen einheitlichen universellen Betrag.',
-         'Das Modell der festen Einlage wurde im Oktober 2022 abgeschafft (Ley 6984/22); jetzt gilt ein System, das an einen Zahlungsfähigkeitsnachweis oder ein Investitionsprojekt gebunden ist, nicht an einen einheitlichen Betrag.'),
+         'Der Betrag im Mythos ist zu hoch, und das Modell gilt nicht mehr. Früher musste man beim '
+         'Antrag auf die Cédula tatsächlich eine Einlage bei einer staatlichen Bank als Sicherheit '
+         'hinterlegen — etwa 4.000 USD, nicht 5.000. Die Einlage wurde mit dem neuen '
+         'Migrationsgesetz (Ley 6984/22) abgeschafft: Heute ist sie nicht mehr nötig, stattdessen '
+         'ist ein Einkommensnachweis zwingend vorzulegen.',
+         'Früher war beim Antrag auf die Cédula eine Einlage bei einer staatlichen Bank von etwa 4.000 USD (nicht 5.000) nötig; heute nicht mehr, dafür ist ein Einkommensnachweis Pflicht.'),
         ("Russen brauchen ein Visum, um einen Residenzantrag zu stellen",
          'Entspricht in Bezug auf die Einreise nicht der Realität — zwischen Russland und Paraguay gilt '
          'seit 2014 ein visumfreies Regime (mehr auf der Seite <a href="{viza}">„Visum und '
@@ -1831,14 +1858,14 @@ def build_meditsina():
     страховка нужна не «на всякий случай», а как рабочий инструмент на первый же год.</p>
 
     <h2>Если нужна помощь с выбором</h2>
-    <p>Подбор плана под ваш статус резидентства, разбор мелкого шрифта в договоре и
-    сопровождение на приёме — отдельная услуга,
+    <p>Переводчик на приёме у врача (по часам) и подсказка по страховке — в том числе
+    рекомендация типичных, распространённых страховщиков — отдельная услуга,
     <a href="{l['usluga-medicina']}">«Медицинское сопровождение»</a>.</p>
 
     <h2>Смотрите также</h2>
     <ul>
-      <li><a href="{l['usluga-medicina']}">«Медицинское сопровождение»</a> — подбор страховки и
-      помощь на приёме</li>
+      <li><a href="{l['usluga-medicina']}">«Медицинское сопровождение»</a> — переводчик у врача и
+      подсказка по страховке</li>
       <li><a href="{l['mify-voprosy']}">«Мифы и вопросы»</a> — денге и другие риски здоровья</li>
       <li><a href="{l['terminologiya']}#ips">«Терминология»: IPS</a> — короткое определение с
       привязкой к занятости и статусу резидента</li>
@@ -1925,14 +1952,14 @@ def build_meditsina():
     desde el primer año.</p>
 
     <h2>Si necesita ayuda para elegir</h2>
-    <p>La selección del plan según su estatus de residencia, el análisis de la letra pequeña
-    del contrato y el acompañamiento en la consulta son un servicio aparte,
+    <p>Un intérprete en la consulta médica (por hora) y orientación sobre el seguro — incluida la
+    recomendación de aseguradoras típicas y habituales — son un servicio aparte,
     <a href="{l['usluga-medicina']}">«Asistencia médica»</a>.</p>
 
     <h2>Vea también</h2>
     <ul>
-      <li><a href="{l['usluga-medicina']}">«Asistencia médica»</a> — selección de seguro y
-      acompañamiento en la consulta</li>
+      <li><a href="{l['usluga-medicina']}">«Asistencia médica»</a> — intérprete en la consulta y
+      orientación sobre el seguro</li>
       <li><a href="{l['mify-voprosy']}">«Mitos y preguntas»</a> — el dengue y otros riesgos de
       salud</li>
       <li><a href="{l['terminologiya']}#ips">«Terminología»: IPS</a> — definición breve
@@ -2016,14 +2043,14 @@ def build_meditsina():
     insurance isn't "just in case," it's a working tool for year one.</p>
 
     <h2>If you need help choosing</h2>
-    <p>Choosing a plan for your residency status, reading the fine print in the contract, and
-    support at appointments are a separate service, <a href="{l['usluga-medicina']}">"Medical
+    <p>An interpreter at medical appointments (by the hour) and pointers on insurance — including
+    recommendations of typical, widely used insurers — are a separate service, <a href="{l['usluga-medicina']}">"Medical
     Support"</a>.</p>
 
     <h2>See also</h2>
     <ul>
-      <li><a href="{l['usluga-medicina']}">"Medical Support"</a> — choosing insurance and
-      support at appointments</li>
+      <li><a href="{l['usluga-medicina']}">"Medical Support"</a> — an interpreter at the doctor's and
+      insurance pointers</li>
       <li><a href="{l['mify-voprosy']}">"Myths & Questions"</a> — dengue and other health
       risks</li>
       <li><a href="{l['terminologiya']}#ips">"Terminology": IPS</a> — a short definition tied to
@@ -2118,14 +2145,14 @@ def build_meditsina():
     Fälle", sondern ein Arbeitswerkzeug für das erste Jahr.</p>
 
     <h2>Wenn Sie Hilfe bei der Wahl brauchen</h2>
-    <p>Die Planauswahl passend zu Ihrem Aufenthaltsstatus, die Prüfung des Kleingedruckten im
-    Vertrag und die Begleitung beim Arztbesuch sind eine eigene Leistung,
+    <p>Ein Dolmetscher beim Arzttermin (nach Stunden) und eine Orientierung zur Versicherung —
+    einschließlich der Empfehlung typischer, verbreiteter Versicherer — sind eine eigene Leistung,
     <a href="{l['usluga-medicina']}">„Medizinische Begleitung"</a>.</p>
 
     <h2>Siehe auch</h2>
     <ul>
       <li><a href="{l['usluga-medicina']}">„Medizinische Begleitung"</a> —
-      Versicherungsauswahl und Begleitung beim Arztbesuch</li>
+      Dolmetscher beim Arzt und Orientierung zur Versicherung</li>
       <li><a href="{l['mify-voprosy']}">„Mythen und Fragen"</a> — Dengue und andere
       Gesundheitsrisiken</li>
       <li><a href="{l['terminologiya']}#ips">„Terminologie": IPS</a> — kurze Definition mit
@@ -2532,6 +2559,290 @@ def build_rabota():
     page("rabota-v-paragvae", lang, TITLE_RABOTA[lang], LEAD_RABOTA[lang], body,
          extra_schema=schema_crumbs(lang, H1_RABOTA[lang], "rabota-v-paragvae"))
 
+
+# ============================================================ 10. КАРТА ПАРАГВАЯ
+#
+# 15.10.2026, сразу мультиязычная — новый раздел из правок партнёра на месте (октябрь 2026,
+# design/promt-vnedrenie-izmeneniy-sayt-okt2026.md, «Новый раздел — Karte von Paraguay»; зоны
+# безопасности и модель размещения подтверждены в design/arkhiv-nesoglasovannykh-punktov-okt2026.md,
+# п. 6). Только подтверждённый контент: обязательные отметки, колонии, новая волна миграции, зоны
+# безопасности, офис в Encarnación. Схема условная — координаты городов приблизительные, это не
+# картографическая карта. Отдельно от map_link.py (связка с map.grundparaguay.com, MAP_LIVE = False):
+# ссылаться ли отсюда на интерактивную карту — решить, когда её опубликуют.
+
+# Приблизительный контур Парагвая (долгота, широта) — для условной схемы, не для навигации.
+_PY_OUTLINE = [(-62.65, -22.23), (-61.75, -19.65), (-59.10, -19.30), (-58.15, -19.85), (-58.17, -20.17),
+               (-57.95, -20.70), (-57.85, -21.40), (-57.95, -22.08), (-57.00, -22.20), (-56.40, -22.25),
+               (-55.85, -22.30), (-55.70, -22.60), (-55.60, -23.00), (-55.50, -23.60), (-55.35, -23.95),
+               (-54.60, -23.90), (-54.30, -24.05), (-54.35, -24.50), (-54.50, -25.10), (-54.60, -25.55),
+               (-54.62, -25.90), (-54.70, -26.30), (-55.00, -26.70), (-55.40, -27.00), (-55.87, -27.36),
+               (-56.30, -27.45), (-56.90, -27.45), (-57.50, -27.30), (-58.20, -27.30), (-58.60, -27.28),
+               (-58.30, -26.86), (-58.00, -26.20), (-57.65, -25.40), (-58.50, -24.90), (-59.50, -24.20),
+               (-60.50, -23.60), (-61.60, -22.90)]
+
+
+def _xy(lon, lat):
+    return round(30 + (lon + 62.8) * 62, 1), round(20 + (-19.2 - lat) * 62, 1)
+
+
+KARTA_SVG_TEXT = {
+    "ru": dict(title="Схема Парагвая: где мы работаем и зоны безопасности",
+               desc="Условная схема: офис в Encarnación, колонии Hohenau, Obligado и Bella Vista, Асунсьон, Сьюдад-дель-Эсте, Filadelfia в Чако; голубая зона — спокойнее, красные — осторожнее.",
+               chaco="Чако", office="наш офис", calm="спокойнее: Encarnación и Itapúa",
+               caution="осторожнее: Ciudad del Este, Asunción, Чако",
+               note="Условная схема — положение городов приблизительное"),
+    "es": dict(title="Esquema de Paraguay: dónde trabajamos y zonas de seguridad",
+               desc="Esquema orientativo: oficina en Encarnación, colonias Hohenau, Obligado y Bella Vista, Asunción, Ciudad del Este, Filadelfia en el Chaco; zona azul — más tranquila, zonas rojas — más prudencia.",
+               chaco="Chaco", office="nuestra oficina", calm="más tranquilo: Encarnación e Itapúa",
+               caution="más prudencia: Ciudad del Este, Asunción, Chaco",
+               note="Esquema orientativo — la ubicación de las ciudades es aproximada"),
+    "en": dict(title="Diagram of Paraguay: where we work and safety zones",
+               desc="Schematic diagram: office in Encarnación, the Hohenau, Obligado and Bella Vista colonies, Asunción, Ciudad del Este, Filadelfia in the Chaco; blue zone — calmer, red zones — more caution.",
+               chaco="Chaco", office="our office", calm="calmer: Encarnación and Itapúa",
+               caution="more caution: Ciudad del Este, Asunción, Chaco",
+               note="Schematic diagram — city positions are approximate"),
+    "de": dict(title="Schema von Paraguay: wo wir arbeiten und Sicherheitszonen",
+               desc="Schematische Darstellung: Büro in Encarnación, die Kolonien Hohenau, Obligado und Bella Vista, Asunción, Ciudad del Este, Filadelfia im Chaco; blaue Zone — ruhiger, rote Zonen — mehr Vorsicht.",
+               chaco="Chaco", office="unser Büro", calm="ruhiger: Encarnación und Itapúa",
+               caution="mehr Vorsicht: Ciudad del Este, Asunción, Chaco",
+               note="Schematische Darstellung — Lage der Orte annähernd"),
+}
+
+
+def _karta_svg(lang):
+    t = KARTA_SVG_TEXT[lang]
+    outline = " ".join(f"{x},{y}" for x, y in (_xy(*p) for p in _PY_OUTLINE))
+    asu, enc, cde, fil = _xy(-57.58, -25.28), _xy(-55.87, -27.33), _xy(-54.61, -25.51), _xy(-60.03, -22.35)
+    colonies = [("Hohenau", _xy(-55.75, -27.08)), ("Obligado", _xy(-55.64, -27.05)), ("Bella Vista", _xy(-55.57, -27.03))]
+    col_labels = "\n  ".join(
+        f'<circle cx="{x}" cy="{y}" r="4" fill="#E8F1FB"/>'
+        f'<line x1="{x}" y1="{y}" x2="575" y2="{430 + 20 * i}" class="grid-line" stroke-width="1"/>'
+        f'<text x="580" y="{434 + 20 * i}" font-size="12">{name}</text>'
+        for i, (name, (x, y)) in enumerate(colonies))
+    return f'''
+<svg viewBox="0 0 680 620" width="100%" height="auto" role="img" aria-labelledby="kartaTitle-{lang} kartaDesc-{lang}">
+  <title id="kartaTitle-{lang}">{t["title"]}</title>
+  <desc id="kartaDesc-{lang}">{t["desc"]}</desc>
+  <polygon points="{outline}" fill="none" stroke="#E8F1FB" stroke-width="2"/>
+  <ellipse cx="{_xy(-61.0, -21.6)[0]}" cy="{_xy(-61.0, -21.6)[1]}" rx="105" ry="60" class="accent" fill-opacity="0.12" stroke-opacity="0.5" stroke-dasharray="4 4"/>
+  <text x="{_xy(-61.4, -21.0)[0]}" y="{_xy(-61.4, -21.0)[1]}" font-size="14" class="dim">{t["chaco"]}</text>
+  <ellipse cx="{_xy(-55.75, -27.12)[0]}" cy="{_xy(-55.75, -27.12)[1]}" rx="42" ry="26" fill="#7FB3E6" fill-opacity="0.22" stroke="#7FB3E6" stroke-opacity="0.7"/>
+  <circle cx="{asu[0]}" cy="{asu[1]}" r="14" class="accent" fill-opacity="0.18" stroke-opacity="0.6"/>
+  <circle cx="{cde[0]}" cy="{cde[1]}" r="14" class="accent" fill-opacity="0.18" stroke-opacity="0.6"/>
+  <circle cx="{asu[0]}" cy="{asu[1]}" r="5" fill="#E8F1FB"/><text x="{asu[0] - 20}" y="{asu[1] + 5}" font-size="13" text-anchor="end">Asunción</text>
+  <circle cx="{cde[0]}" cy="{cde[1]}" r="5" fill="#E8F1FB"/><text x="{cde[0] - 20}" y="{cde[1] - 12}" font-size="13" text-anchor="end">Ciudad del Este</text>
+  <circle cx="{fil[0]}" cy="{fil[1]}" r="5" fill="#E8F1FB"/><text x="{fil[0] + 10}" y="{fil[1] + 5}" font-size="13">Filadelfia (Fernheim)</text>
+  {col_labels}
+  <rect x="{enc[0] - 6}" y="{enc[1] - 6}" width="12" height="12" fill="#E8F1FB"/>
+  <text x="{enc[0] - 12}" y="{enc[1] + 24}" font-size="13" text-anchor="end">Encarnación — {t["office"]}</text>
+  <ellipse cx="40" cy="566" rx="12" ry="8" fill="#7FB3E6" fill-opacity="0.22" stroke="#7FB3E6" stroke-opacity="0.7"/>
+  <text x="60" y="570" font-size="12" class="dim">{t["calm"]}</text>
+  <ellipse cx="40" cy="588" rx="12" ry="8" class="accent" fill-opacity="0.18" stroke-opacity="0.6"/>
+  <text x="60" y="592" font-size="12" class="dim">{t["caution"]}</text>
+  <text x="28" y="614" font-size="11" class="dim">{t["note"]}</text>
+</svg>
+'''
+
+
+# Карточка «Карта Парагвая» на лендинге хаба — тем же приёмом, что RABOTA_CARD выше.
+KARTA_CARD = {
+    "ru": ("Карта Парагвая",
+           "Где мы работаем и где клиенты оформляют документы, исторические колонии меннонитов, "
+           "новая волна переселенцев и зоны, где стоит быть осторожнее, — на одной схеме."),
+    "es": ("Mapa de Paraguay",
+           "Dónde trabajamos y dónde los clientes tramitan sus documentos, las colonias menonitas "
+           "históricas, la nueva ola de inmigrantes y las zonas donde conviene ser más prudente — en "
+           "un solo esquema."),
+    "en": ("Map of Paraguay",
+           "Where we work and where clients do their paperwork, the historical Mennonite colonies, "
+           "the new wave of immigrants, and the areas where more caution is advisable — on one "
+           "diagram."),
+    "de": ("Karte von Paraguay",
+           "Wo wir arbeiten und wo Mandanten ihre Dokumente erledigen, die historischen "
+           "Mennonitenkolonien, die neue Einwanderungswelle und die Gegenden, in denen mehr "
+           "Vorsicht angebracht ist — auf einer Übersicht."),
+}
+
+TITLE_KARTA = {
+    "ru": "Карта Парагвая: где мы работаем, колонии и безопасность | Grund Paraguay",
+    "es": "Mapa de Paraguay: dónde trabajamos, colonias y seguridad | Grund Paraguay",
+    "en": "Map of Paraguay: Where We Work, Colonies and Safety | Grund Paraguay",
+    "de": "Karte von Paraguay: wo wir arbeiten, Kolonien und Sicherheit | Grund Paraguay",
+}
+H1_KARTA = {"ru": "Карта Парагвая", "es": "Mapa de Paraguay", "en": "Map of Paraguay", "de": "Karte von Paraguay"}
+LEAD_KARTA = {
+    "ru": ("В одном месте — то, что иначе разбросано по разным страницам: где мы работаем и где "
+           "клиенты оформляют документы, где живут исторические и новые общины переселенцев и где "
+           "стоит быть осторожнее."),
+    "es": ("En un solo lugar, lo que de otro modo está repartido en varias páginas: dónde trabajamos "
+           "y dónde los clientes tramitan sus documentos, dónde viven las comunidades de inmigrantes "
+           "históricas y nuevas, y dónde conviene ser más prudente."),
+    "en": ("In one place, what is otherwise scattered across several pages: where we work and where "
+           "clients do their paperwork, where historical and new immigrant communities live, and "
+           "where more caution is advisable."),
+    "de": ("An einem Ort, was sonst über mehrere Seiten verteilt ist: wo wir arbeiten und wo "
+           "Mandanten ihre Dokumente erledigen, wo historische und neue Einwanderergemeinschaften "
+           "leben und wo man vorsichtiger sein sollte."),
+}
+
+
+def build_karta():
+  for lang in LANGS:
+    l = L(lang)
+    if lang == "ru":
+        prose = f'''
+    <h2>Где мы работаем</h2>
+    <p>Наш офис — в Encarnación (департамент Itapúa): здесь клиенты оформляют документы. Многие
+    затем остаются в районе Hohenau, Obligado или Bella Vista. Если вы не хотите жить в этом
+    районе, мы подберём другое подходящее место в Парагвае через других партнёров. Как устроен
+    процесс в целом — на странице <a href="{l['protsess']}">«Процесс и сроки»</a>.</p>
+
+    <h2>Безопасность по регионам</h2>
+    <p>По нашему опыту на месте, Encarnación и департамент Itapúa — более спокойный регион. В
+    Ciudad del Este, Asunción и Чако стоит быть осторожнее. Цифры и источники по безопасности в
+    стране в целом — на странице <a href="{l['riski']}">«Риски и трудности»</a>.</p>
+
+    <h2>Исторические колонии: меннониты из России и СССР</h2>
+    <ul>
+      <li><strong>Fernheim (Filadelfia)</strong> — основана меннонитами, бежавшими от репрессий при
+      Сталине.</li>
+      <li><strong>Volendam</strong> — беженцы после Второй мировой войны (1947).</li>
+      <li><strong>Neuland</strong> — тоже 1947 год, беженцы из СССР.</li>
+    </ul>
+    <p>О Filadelfia и меннонитских колониях как о месте, которое стоит увидеть, — на странице
+    <a href="{l['attr-filadelfia']}">«Филадельфия и меннонитские колонии»</a>.</p>
+
+    <h2>Новая волна переселенцев</h2>
+    <p>С COVID и войной в Украине началась новая волна миграции. В Colonias Unidas (Itapúa) сейчас
+    живут русские и украинцы; в Hohenau, Obligado и Bella Vista селятся новые европейские
+    иммигранты — в основном немцы, но также русские, украинцы, бельгийцы и поляки.</p>
+
+    <h2>Смотрите также</h2>
+    <ul>
+      <li><a href="{l['zhizn-v-paragvae']}">«Жизнь в Парагвае»</a> — города, климат, повседневная жизнь</li>
+      <li><a href="{l['riski']}">«Риски и трудности»</a> — безопасность и здоровье подробно</li>
+      <li><a href="{l['protsess']}">«Процесс и сроки»</a> — этапы оформления</li>
+    </ul>'''
+    elif lang == "es":
+        prose = f'''
+    <h2>Dónde trabajamos</h2>
+    <p>Nuestra oficina está en Encarnación (departamento de Itapúa): allí los clientes tramitan sus
+    documentos. Muchos se quedan luego en la zona de Hohenau, Obligado o Bella Vista. Si no quiere
+    vivir en esa zona, buscamos otro lugar adecuado en Paraguay a través de otros socios. Cómo es
+    el proceso en general, en la página <a href="{l['protsess']}">«Proceso y plazos»</a>.</p>
+
+    <h2>Seguridad por regiones</h2>
+    <p>Según nuestra experiencia en el lugar, Encarnación y el departamento de Itapúa son una región
+    más tranquila. En Ciudad del Este, Asunción y el Chaco conviene ser más prudente. Cifras y
+    fuentes sobre la seguridad en todo el país, en la página
+    <a href="{l['riski']}">«Riesgos y dificultades»</a>.</p>
+
+    <h2>Colonias históricas: menonitas de Rusia y la URSS</h2>
+    <ul>
+      <li><strong>Fernheim (Filadelfia)</strong> — fundada por menonitas que huyeron de la represión
+      bajo Stalin.</li>
+      <li><strong>Volendam</strong> — refugiados después de la Segunda Guerra Mundial (1947).</li>
+      <li><strong>Neuland</strong> — también 1947, refugiados de la URSS.</li>
+    </ul>
+    <p>Sobre Filadelfia y las colonias menonitas como lugar para visitar, en la página
+    <a href="{l['attr-filadelfia']}">«Filadelfia y las colonias menonitas»</a>.</p>
+
+    <h2>La nueva ola de inmigrantes</h2>
+    <p>Con el COVID y la guerra en Ucrania comenzó una nueva ola migratoria. En Colonias Unidas
+    (Itapúa) viven hoy rusos y ucranianos; en Hohenau, Obligado y Bella Vista se establecen nuevos
+    inmigrantes europeos — sobre todo alemanes, pero también rusos, ucranianos, belgas y polacos.</p>
+
+    <h2>Vea también</h2>
+    <ul>
+      <li><a href="{l['zhizn-v-paragvae']}">«Vida en Paraguay»</a> — ciudades, clima, vida cotidiana</li>
+      <li><a href="{l['riski']}">«Riesgos y dificultades»</a> — seguridad y salud en detalle</li>
+      <li><a href="{l['protsess']}">«Proceso y plazos»</a> — las etapas del trámite</li>
+    </ul>'''
+    elif lang == "en":
+        prose = f'''
+    <h2>Where we work</h2>
+    <p>Our office is in Encarnación (Itapúa department): this is where clients do their paperwork.
+    Many then stay in the Hohenau, Obligado or Bella Vista area. If you don't want to live in that
+    area, we find another suitable place in Paraguay through other partners. How the process works
+    overall is on the <a href="{l['protsess']}">"Process & Timeline"</a> page.</p>
+
+    <h2>Safety by region</h2>
+    <p>From our experience on the ground, Encarnación and the Itapúa department are a calmer region.
+    In Ciudad del Este, Asunción and the Chaco, more caution is advisable. Figures and sources on
+    safety across the country are on the <a href="{l['riski']}">"Risks & Difficulties"</a> page.</p>
+
+    <h2>Historical colonies: Mennonites from Russia and the USSR</h2>
+    <ul>
+      <li><strong>Fernheim (Filadelfia)</strong> — founded by Mennonites who fled repression under
+      Stalin.</li>
+      <li><strong>Volendam</strong> — refugees after the Second World War (1947).</li>
+      <li><strong>Neuland</strong> — also 1947, refugees from the USSR.</li>
+    </ul>
+    <p>More on Filadelfia and the Mennonite colonies as a place to visit is on the
+    <a href="{l['attr-filadelfia']}">"Filadelfia and the Mennonite colonies"</a> page.</p>
+
+    <h2>The new wave of immigrants</h2>
+    <p>COVID and the war in Ukraine started a new wave of migration. Russians and Ukrainians now live
+    in Colonias Unidas (Itapúa); new European immigrants are settling in Hohenau, Obligado and Bella
+    Vista — mostly Germans, but also Russians, Ukrainians, Belgians and Poles.</p>
+
+    <h2>See also</h2>
+    <ul>
+      <li><a href="{l['zhizn-v-paragvae']}">"Life in Paraguay"</a> — cities, climate, everyday life</li>
+      <li><a href="{l['riski']}">"Risks & Difficulties"</a> — safety and health in detail</li>
+      <li><a href="{l['protsess']}">"Process & Timeline"</a> — the stages of the process</li>
+    </ul>'''
+    else:
+        prose = f'''
+    <h2>Wo wir arbeiten</h2>
+    <p>Unser Büro ist in Encarnación (Departamento Itapúa): Hier erledigen Mandanten ihre
+    Dokumente. Viele bleiben anschließend in der Gegend von Hohenau, Obligado oder Bella Vista. Wer
+    dort nicht leben möchte, für den finden wir über andere Partner einen anderen passenden Ort in
+    Paraguay. Wie der Ablauf insgesamt aussieht, steht auf der Seite
+    <a href="{l['protsess']}">„Prozess und Fristen"</a>.</p>
+
+    <h2>Sicherheit nach Regionen</h2>
+    <p>Nach unserer Erfahrung vor Ort sind Encarnación und das Departamento Itapúa eine ruhigere
+    Region. In Ciudad del Este, Asunción und im Chaco ist mehr Vorsicht angebracht. Zahlen und
+    Quellen zur Sicherheit im ganzen Land stehen auf der Seite
+    <a href="{l['riski']}">„Risiken und Schwierigkeiten"</a>.</p>
+
+    <h2>Historische Kolonien: Mennoniten aus Russland und der UdSSR</h2>
+    <ul>
+      <li><strong>Fernheim (Filadelfia)</strong> — gegründet von Mennoniten, die vor den Repressionen
+      unter Stalin flohen.</li>
+      <li><strong>Volendam</strong> — Flüchtlinge nach dem Zweiten Weltkrieg (1947).</li>
+      <li><strong>Neuland</strong> — ebenfalls 1947, Flüchtlinge aus der UdSSR.</li>
+    </ul>
+    <p>Mehr über Filadelfia und die Mennonitenkolonien als Reiseziel auf der Seite
+    <a href="{l['attr-filadelfia']}">„Filadelfia und die mennonitischen Kolonien"</a>.</p>
+
+    <h2>Die neue Einwanderungswelle</h2>
+    <p>Mit COVID und dem Krieg in der Ukraine hat eine neue Einwanderungswelle eingesetzt. In den
+    Colonias Unidas (Itapúa) leben heute Russen und Ukrainer; in Hohenau, Obligado und Bella Vista
+    lassen sich neue europäische Einwanderer nieder — vor allem Deutsche, aber auch Russen, Ukrainer,
+    Belgier und Polen.</p>
+
+    <h2>Siehe auch</h2>
+    <ul>
+      <li><a href="{l['zhizn-v-paragvae']}">„Leben in Paraguay"</a> — Städte, Klima, Alltag</li>
+      <li><a href="{l['riski']}">„Risiken und Schwierigkeiten"</a> — Sicherheit und Gesundheit im Detail</li>
+      <li><a href="{l['protsess']}">„Prozess und Fristen"</a> — die Etappen des Verfahrens</li>
+    </ul>'''
+
+    body = f'''
+{crumbs(lang, H1_KARTA[lang])}
+{hero(H1_KARTA[lang], LEAD_KARTA[lang])}
+<section style="padding-top:0;">
+  <div class="prose">
+    <div class="diagram">{_karta_svg(lang)}</div>
+    {prose}
+  </div>
+</section>
+'''
+    page("karta-paragvaya", lang, TITLE_KARTA[lang], LEAD_KARTA[lang], body,
+         extra_schema=schema_crumbs(lang, H1_KARTA[lang], "karta-paragvaya"))
+
 # ======================================================================= run
 
 build_hub_landing()
@@ -2544,3 +2855,4 @@ build_viza()
 build_mify()
 build_meditsina()
 build_rabota()
+build_karta()

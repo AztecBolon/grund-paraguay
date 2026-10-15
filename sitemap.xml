@@ -1126,6 +1126,46 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://grundparaguay.com/ru/karta-paragvaya.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://grundparaguay.com/ru/karta-paragvaya.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://grundparaguay.com/es/mapa-de-paraguay.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://grundparaguay.com/en/map-of-paraguay.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://grundparaguay.com/de/karte-von-paraguay.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grundparaguay.com/ru/karta-paragvaya.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://grundparaguay.com/es/mapa-de-paraguay.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://grundparaguay.com/ru/karta-paragvaya.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://grundparaguay.com/es/mapa-de-paraguay.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://grundparaguay.com/en/map-of-paraguay.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://grundparaguay.com/de/karte-von-paraguay.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grundparaguay.com/ru/karta-paragvaya.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://grundparaguay.com/en/map-of-paraguay.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://grundparaguay.com/ru/karta-paragvaya.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://grundparaguay.com/es/mapa-de-paraguay.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://grundparaguay.com/en/map-of-paraguay.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://grundparaguay.com/de/karte-von-paraguay.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grundparaguay.com/ru/karta-paragvaya.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://grundparaguay.com/de/karte-von-paraguay.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://grundparaguay.com/ru/karta-paragvaya.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://grundparaguay.com/es/mapa-de-paraguay.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://grundparaguay.com/en/map-of-paraguay.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://grundparaguay.com/de/karte-von-paraguay.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grundparaguay.com/ru/karta-paragvaya.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://grundparaguay.com/ru/soprovozhdenie-i-komplaens.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://grundparaguay.com/ru/soprovozhdenie-i-komplaens.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://grundparaguay.com/es/acompanamiento-y-cumplimiento.html"/>
