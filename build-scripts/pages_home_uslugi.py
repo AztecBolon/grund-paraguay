@@ -611,6 +611,8 @@ TEASERS_NEW5 = {
         "business": "Buying & selling a business is deal support for those who'd rather step into a running company or exit their own, instead of registering one from scratch.",
     },
     "de": {
+        # «Резидентура» на DE — 19.10.2026: страница переведена, карточка стала анонсом.
+        "residencia": "Die Beantragung des befristeten Aufenthaltstitels und seine Umwandlung in den unbefristeten — die Einstiegsetappe eines Prozesses, der meist 2 bis 5 Jahre dauert. Wir prüfen die Dokumente vor der Einreichung, nicht nach einer Ablehnung. Die RUC wird nach Erhalt der Cédula (CI) in der Regel durchschnittlich innerhalb von 3–6 Tagen erteilt.",
         "compliance": "Begleitung und Compliance ist eine Abonnement-Leistung, die den Aufenthaltsstatus auf dem gesamten Weg von befristet zu unbefristet aufrechterhält, damit er nicht wegen einer versäumten Meldung verloren geht.",
         "citizenship": "Die paraguayische Staatsbürgerschaft verleiht einen Reisepass mit visumfreiem Zugang zu rund 145 Ländern (Henley Passport Index) und einen stabileren Rechtsstatus als der Aufenthaltstitel. Kurze Orientierung: Fristen, Prüfung und Kosten.",
         "realestate": "Prüfung und Kauf von Immobilien ist eine Due-Diligence-Leistung für ein konkretes Objekt, die vor Überzahlung und vor verdeckten Risiken schützt, einschließlich der jährlichen Eigentumssteuer.",

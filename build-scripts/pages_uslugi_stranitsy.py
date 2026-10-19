@@ -48,7 +48,7 @@ def L(lang):
 
 
 USLUGA_LABEL = {
-    "usluga-residencia": {"ru": "Резидентура (ВНЖ)"},
+    "usluga-residencia": {"ru": "Резидентура (ВНЖ)", "de": "Aufenthaltstitel"},
     "usluga-investor": {"ru": "Инвесторский путь"},
     "usluga-relocation": {"ru": "Релокация организаций", "es": "Relocalización de empresas",
                            "en": "Business Relocation", "de": "Unternehmensrelokation"},
@@ -86,10 +86,10 @@ def schema_crumbs(lang, page_id):
     ])
 
 
-def _dnm_chart():
+def _dnm_chart(lang):
     """Переиспользуем уже готовую тему 'dnm' слайдера «Парагвай в цифрах» — те же данные,
     без нового исследования (см. chart_data.py: DNM_VALS, источники в fakty-dlya-kontenta.md)."""
-    topic = next(t for t in build_topics("ru") if t["key"] == "dnm")
+    topic = next(t for t in build_topics(lang) if t["key"] == "dnm")
     return render_topic(topic), topic["caption"]
 
 
@@ -226,7 +226,7 @@ def _company_timing_svg(lang):
 
 # Рендерим все графики один раз (не зависят от l, только от lang) — избегаем повторного рендера
 # внутри f-string ниже.
-_DNM_SVG, _DNM_CAPTION = _dnm_chart()
+_DNM = {lang: _dnm_chart(lang) for lang in ["ru", "de"]}   # (svg, caption)
 _INVESTOR_SVG = _investor_timeline_chart()
 _COMPLIANCE_SVG = {lang: _compliance_cycle_svg(lang) for lang in ["ru", "es", "en", "de"]}
 _CITIZENSHIP_SVG = {lang: _citizenship_timeline_svg(lang) for lang in ["ru", "es", "en", "de"]}
@@ -262,8 +262,8 @@ PAGES = {
 
     <h2>Сколько резиденций выдаётся</h2>
     <div class="diagram">
-      {_DNM_SVG}
-      <p class="diagram-caption">{_DNM_CAPTION}</p>
+      {_DNM['ru'][0]}
+      <p class="diagram-caption">{_DNM['ru'][1]}</p>
     </div>
     <p>Рост числа выданных резиденций — не повод расслабиться по срокам: та же логика роста
     притока обычно предшествует ужесточению условий (подробнее — на странице
@@ -299,6 +299,78 @@ PAGES = {
     final_h2="Готовы обсудить свою ситуацию?",
     final_p="Проверим комплект документов и честно оценим сроки конкретно по вашей категории.",
     final_cta="Оставить заявку на консультацию",
+),
+# DE — перевод RU-версии (19.10.2026). Единственное отличие от оригинала: ссылка на комплаенс
+# ведёт на отдельную страницу «Begleitung und Compliance» (на DE она есть), а не на карточку
+# на «Услугах», как в RU-тексте, написанном до появления этой страницы.
+"de": dict(
+    title="Aufenthaltstitel in Paraguay: Temporal → Permanente | Grund Paraguay",
+    description="Wie man in Paraguay einen befristeten und unbefristeten Aufenthaltstitel erhält: Dokumente nach Art. 50 Ley 6984/22, 12 Kategorien der DNM-Resolution Nr. 407/2026, Statistik erteilter Aufenthaltstitel und was nach Erhalt des Status nötig ist.",
+    h1="Aufenthaltstitel in Paraguay: von Temporal zu Permanente",
+    lead='Der Aufenthaltstitel ist eine Aufenthaltserlaubnis in Paraguay, die das Recht gibt, legal im Land zu leben und zu arbeiten. Das ist keine einmalige Leistung, sondern die erste Etappe eines längeren Prozesses: zunächst der befristete (<a href="{terminologiya}#residencia-temporal">Residencia Temporal</a>, bis zu 2 Jahre mit Verlängerung um denselben Zeitraum), dann — meist nach 2–5 Jahren — der unbefristete (<a href="{terminologiya}#residencia-permanente">Residencia Permanente</a>, für 10 Jahre mit Verlängerung). Wir prüfen das Dokumentenpaket vor der Einreichung, nicht nach einer Ablehnung.',
+    body=lambda l: f'''
+    <p>Der Aufenthaltstitel allein klärt die Frage des legalen Lebens im Land noch nicht — er ist
+    das Einstiegspaket, auf das zwingend Begleitung und Compliance folgen (siehe Abschnitt unten).
+    Der Markt für die Beantragung befristeter und unbefristeter Aufenthaltstitel in Paraguay ist
+    bereits voller Vermittler, und allein über den Preis zu konkurrieren, ergibt keinen Sinn — die
+    eigentliche Arbeit beginnt nach Erhalt des Status.</p>
+
+    <h2>Was vorbereitet werden muss</h2>
+    <p>Das Dokumentenpaket — nach Art. 50 des Ley N° 6984/22 „De Migraciones" — prüfen wir noch
+    vor der Einreichung: Reisepass, konsularisches Visum, Geburtsurkunde, Familienstandsbescheinigung,
+    internationales Führungszeugnis und eine Reihe weiterer Dokumente je nach Antragstellerkategorie.</p>
+    <p>Die vollständige Checkliste — mit den Anforderungen an Apostille und Übersetzung — steht auf
+    den Seiten <a href="{l['dok-temporal']}">„Befristeter Aufenthalt: Dokumente"</a> und
+    <a href="{l['dok-permanente']}">„Daueraufenthalt: Dokumente"</a> im Bereich „Dokumente".</p>
+
+    <h2>12 Antragstellerkategorien — DNM-Resolution Nr. 407/2026</h2>
+    <p>Seit dem 6. Juli 2026 gilt die neue Resolution der Migrationsbehörde
+    (<a href="{l['terminologiya']}#dnm">DNM</a>) Nr. 407/2026 — 12 Antragstellerkategorien mit jeweils
+    eigenen Anforderungen. Die genauen Geldschwellen je Kategorie sind zum Zeitpunkt der
+    Veröffentlichung offiziell nicht bekannt gegeben, daher klären wir Kosten und Bedingungen für
+    Ihre Kategorie individuell.</p>
+
+    <h2>Wie viele Aufenthaltstitel erteilt werden</h2>
+    <div class="diagram">
+      {_DNM['de'][0]}
+      <p class="diagram-caption">{_DNM['de'][1]}</p>
+    </div>
+    <p>Die steigende Zahl erteilter Aufenthaltstitel ist kein Grund, sich mit den Fristen Zeit zu
+    lassen: Eine solche Zuwanderungswelle geht einer Verschärfung der Bedingungen meist voraus (mehr
+    dazu auf der Seite <a href="{l['pochemu-paragvay']}">„Warum Paraguay"</a> — am Beispiel
+    Argentiniens, das diesen Zyklus bereits durchlaufen hat).</p>
+
+    <h2>Nach der Temporal: verpflichtende Compliance</h2>
+    <p>Nach Erhalt der Residencia Temporal entsteht die Pflicht, eine
+    <a href="{l['terminologiya']}#ruc">RUC</a> zu registrieren (gekoppelt an die
+    <a href="{l['terminologiya']}#cedula">Cédula</a>; nach Erhalt der Cédula (CI) wird die RUC in der
+    Regel durchschnittlich innerhalb von 3–6 Tagen erteilt) und regelmäßig Steuererklärungen
+    einzureichen, einschließlich Nullmeldungen, wenn keine Tätigkeit stattfand — das ist eine
+    eigenständige Leistung (siehe <a href="{l['usluga-compliance']}">„Begleitung und Compliance"</a>),
+    ohne die sich die Umwandlung in den unbefristeten Aufenthaltstitel verzögern oder scheitern kann.</p>
+
+    <h2>Wie es weitergeht — die Staatsbürgerschaft</h2>
+    <p>Die Einbürgerung ist frühestens 3 Jahre nach Erhalt der Residencia Permanente möglich
+    (Art. 148 der Verfassung Paraguays) — die realistische Gesamtdauer vom Umzug bis zum Pass liegt
+    meist bei 7–8 Jahren. Das Verfahren führt der Oberste Gerichtshof
+    (<a href="{l['terminologiya']}#corte-suprema">Corte Suprema de Justicia</a>), nicht die
+    Migrationsbehörde; die vollständige Dokumentenliste steht auf der Seite
+    <a href="{l['dok-grazhdanstvo']}">„Staatsbürgerschaft: Dokumente"</a>.</p>
+
+    <h2>Siehe auch</h2>
+    <ul>
+      <li><a href="{l['protsess']}">„Prozess und Fristen"</a> — die vollständige Zeitachse vom Antrag
+      bis zum Pass</li>
+      <li><a href="{l['riski']}">„Ehrlich über Risiken"</a> — wie sich die Einstiegsbedingungen mit
+      der Zeit ändern</li>
+      <li><a href="{l['keisy']}">„Fallstudien"</a> — typische Mandantengeschichten</li>
+      <li><a href="{l['usluga-investor']}">„Investorenweg"</a> — der schnellere Weg zum unbefristeten
+      Aufenthaltstitel bei Investitionen ab 70 000 USD</li>
+    </ul>
+    ''',
+    final_h2="Bereit, Ihre Situation zu besprechen?",
+    final_p="Wir prüfen das Dokumentenpaket und schätzen die Fristen ehrlich ein — konkret für Ihre Kategorie.",
+    final_cta="Beratung anfragen",
 ),
 },
 "usluga-investor": {
